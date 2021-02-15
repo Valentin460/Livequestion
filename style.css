@@ -1,0 +1,66 @@
+/*CSS de la partie 5 du site*/
+
+#part5 {
+    background: #D00070;
+    border-bottom-left-radius: 50% 90px;
+    border-bottom-right-radius: 50% 90px;
+    color: white;
+    padding: 40px 0 40px 0;
+    text-align: center;
+}
+
+#part5 img {
+    height: 40px;
+    width: 40px;
+}
+
+#part5 p {
+    font-size: 35px;
+}
+
+#part5 h6 {
+    display: block;
+}
+
+#part5 h6:last-child {
+    padding-bottom: 40px;
+}
+
+#part5 button {
+    margin: 10px 0 0 10px;
+    padding: 5px 30px 5px 30px;
+}
+
+#part5 span {
+    font-weight: bold;
+}
+
+/*CSS de la Section FAQ du site*/
+
+#faq {
+    border-bottom-left-radius: 50% 90px;
+    border-bottom-right-radius: 50% 90px;
+    padding: 10%;
+    text-align: center;
+}
+
+#faq p {
+    font-size: 40px;
+}
+
+#faq h4 {
+    color: #ec008c;
+}
+
+#faq h6 {
+    display: block;
+}
+
+.more {
+    padding: 25px;
+    text-align: center;
+}
+
+.more a {
+    color: #ec008c;
+}
