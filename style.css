@@ -65,3 +65,33 @@
 .more a {
     color: #ec008c;
 }
+
+footer {
+    background-color: #1a2d34;
+    font-weight: bold;
+    height: 100px;
+    padding: 100px 20px;
+}
+
+.whitebloc {
+    border-bottom-left-radius: 55% 90px;
+    border-bottom-right-radius: 55% 90px;
+}
+
+.trait {
+    background: #b0a9a7;
+    height: 1px;
+    opacity: 0.2;
+}
+
+#infosite {
+    color: #b0a9a7;
+    display: inline;
+    font-size: 10px;
+    margin-left: 10%;
+}
+
+#logos {
+    float: right;
+    margin-right: 20%;
+}
