@@ -152,6 +152,10 @@
     margin-left: 15px;
 }
 
+.background-underline {
+    background: linear-gradient(0, #E50F7C 30%, #E50F7C 30%);
+}
+
 /*CSS de la Section FAQ du site*/
 
 #faq {
