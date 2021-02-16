@@ -59,7 +59,8 @@
 }
 
 #slide h2 span {
-	text-decoration:underline #E50F7C;
+	background-color:#E50F7C;
+    background: linear-gradient(0, #E50F7C 30%, #F7F7F7 30%);
 }
 
 #image1, #image2, #image3 {
