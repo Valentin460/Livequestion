@@ -59,7 +59,6 @@
 .more {
     padding: 25px;
     text-align: center;
-    background-color: whitesmoke;
 }
 
 .more a {
@@ -96,7 +95,7 @@ footer {
     margin-right: 20%;
 }
 
-.button1, .button2, .button3 {
+.button1, .button2, .button3, .button4, .button5, .button6{
     font-weight:bold;
     border:1px solid black;
     background:#FFF;
@@ -147,4 +146,29 @@ footer {
     padding-bottom:25px;
     color:white;
     font-size:20px;
+}
+
+.de {
+    display: none;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 20px;
+}
+
+.ef {
+    display: none;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 20px;
+}
+
+.fg {
+    display: none;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 20px;
+}
+
+.questions {
+    background-color: whitesmoke;
 }
