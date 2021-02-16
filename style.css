@@ -40,7 +40,7 @@
 #faq {
     border-bottom-left-radius: 50% 90px;
     border-bottom-right-radius: 50% 90px;
-    padding: 10%;
+    padding: 5%;
     text-align: center;
 }
 
@@ -54,6 +54,7 @@
 
 #faq h6 {
     display: block;
+    margin-top: 5%;
 }
 
 .more {
