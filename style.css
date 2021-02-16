@@ -115,7 +115,9 @@
 
 /*CSS de la partie 5 du site*/
 
-
+.background-underline {
+    background: linear-gradient(0, #E50F7C 30%, #E50F7C 30%);
+}
 
 #part5 {
     background: #D00070;
@@ -153,11 +155,107 @@
     margin-left: 15px;
 }
 
-.background-underline {
-    background: linear-gradient(0, #E50F7C 30%, #E50F7C 30%);
+/*CSS de la Section FAQ du site*/
+
+footer {
+    background-color: #1a2d34;
+    font-weight: bold;
+    height: 100px;
+    padding: 100px 20px;
 }
 
-/*CSS de la Section FAQ du site*/
+.more {
+    padding: 25px;
+    text-align: center;
+}
+
+.more a {
+        color: #ec008c;
+    }
+
+.whitebloc {
+    border-bottom-left-radius: 55% 90px;
+    border-bottom-right-radius: 55% 90px;
+}
+
+.trait {
+    background: #b0a9a7;
+    height: 1px;
+    opacity: 0.2;
+}
+
+.button1, .button2, .button3, .button4, .button5, .button6 {
+	font-weight: bold;
+	border: 1px solid black;
+	background: #FFF;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 18px 250px;
+	transition: all 0.3s ease-in 0s;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+	box-shadow: none;
+}
+
+.b, .c {
+	display: none;
+	font-weight: bold;
+	border: 1px solid black;
+	color: white;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 18px 50px;
+	text-transform: uppercase;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+.ab {
+	display: none;
+	padding-bottom: 25px;
+	color: #000;
+	font-size: 20px;
+}
+
+.bc {
+	display: none;
+	padding-bottom: 25px;
+	color: #000;
+	font-size: 20px;
+}
+
+.cd {
+	display: none;
+	padding-bottom: 25px;
+	color: #000;
+	font-size: 20px;
+}
+
+.de {
+	display: none;
+	padding-bottom: 25px;
+	color: #000;
+	font-size: 20px;
+}
+
+.ef {
+	display: none;
+	padding-bottom: 25px;
+	color: #000;
+	font-size: 20px;
+}
+
+.fg {
+	display: none;
+	padding-bottom: 25px;
+	color: #000;
+	font-size: 20px;
+}
+
+.questions {
+	background-color: whitesmoke;
+}
 
 #faq {
     border-bottom-left-radius: 50% 90px;
@@ -179,33 +277,6 @@
     margin-top: 1%;
 }
 
-.more {
-    padding: 25px;
-    text-align: center;
-}
-
-.more a {
-    color: #ec008c;
-}
-
-footer {
-    background-color: #1a2d34;
-    font-weight: bold;
-    height: 100px;
-    padding: 100px 20px;
-}
-
-.whitebloc {
-    border-bottom-left-radius: 55% 90px;
-    border-bottom-right-radius: 55% 90px;
-}
-
-.trait {
-    background: #b0a9a7;
-    height: 1px;
-    opacity: 0.2;
-}
-
 #infosite {
     color: #b0a9a7;
     display: inline;
@@ -217,77 +288,3 @@ footer {
     float: right;
     margin-right: 20%;
 }
-
-.button1, .button2, .button3, .button4, .button5, .button6{
-    font-weight:bold;
-    border:1px solid black;
-    background:#FFF;
-    display:inline-block;
-    border-radius:5px;
-    padding: 18px 250px;
-    transition: all 0.3s ease-in 0s;
-    box-shadow:2px 2px 2px rgba(0,0,0,0.75);
-    box-shadow: none;
-}
-
-.b, .c {
-    display:none;
-    font-weight:bold;
-    border:1px solid black;
-    color:white;
-    border-radius:5px;
-    margin-top:25px;
-    margin-bottom:25px;
-    padding: 18px 50px;
-    text-transform: uppercase;
-    box-shadow:2px 2px 2px rgba(0,0,0,0.75);
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%); 
-}
-
-.ab {
-    display:none;
-    padding-bottom:25px;
-    color:#000;
-    font-size:20px;
-}
-
-.bc {
-    display:none;
-    padding-bottom:25px;
-    color:#000;
-    font-size:20px;
-}
-
-.cd {
-    display:none;
-    padding-bottom:25px;
-    color:#000;
-    font-size:20px;
-}
-
-.de {
-    display: none;
-    padding-bottom: 25px;
-    color: #000;
-    font-size: 20px;
-}
-
-.ef {
-    display: none;
-    padding-bottom: 25px;
-    color: #000;
-    font-size: 20px;
-}
-
-.fg {
-    display: none;
-    padding-bottom: 25px;
-    color: #000;
-    font-size: 20px;
-}
-
-.questions {
-    background-color: whitesmoke;
-}
-
