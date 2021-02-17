@@ -512,7 +512,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 992px) {
 	.button1, .button2, .button3, .button4, .button5, .button6 {
 		font-weight: bold;
 		border: 1px solid black;
