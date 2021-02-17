@@ -39,6 +39,16 @@
 	padding-top: 30px;
 }
 
+.saint-vincent:hover{
+	text-decoration: none;
+	color: #FFF;
+}
+
+.menu-liens:hover {
+	text-decoration: none;
+	color: #C1BFBF;
+}
+
 .bouton-connexion {
 	background-color: #ec008c;
 	border: none;
@@ -51,7 +61,7 @@
 	text-decoration: none;
 	margin-left: 10px;
 	margin-bottom: 120px;
-}
+	}
 
 .fas {
 	padding-right: 30px;
