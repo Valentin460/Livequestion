@@ -11,7 +11,7 @@
 	background-color: #1a2d34;
 	border-bottom-left-radius: 54% 77px;
 	border-bottom-right-radius: 54% 86px;
-	padding-bottom: 100px;
+	padding-bottom: 185px;
 }
 
 /*----------MENU----------*/
@@ -73,10 +73,10 @@
 	border-top-left-radius: 880px 876px;
 	border-top-right-radius: 566px 587px;
 	border-bottom-left-radius: 7px 74px;
-	border-bottom-right-radius: 900px 150px;
+	border-bottom-right-radius: 900px 68px;
 	margin-left: 51%;
 	position: absolute;
-	margin-top: -25px;
+	margin-top: -17px;
 }
 
 .arrondi2 {
@@ -101,24 +101,20 @@
 	float: right;
 	height: 360px;
 	position: relative;
-	right: 63px;
 	width: 520px;
-	padding-right: 15%;
-	padding-top: 15px:;
+	padding-top: 15px;
 }
 
 .partie1-menu h1 {
 	color: #fff;
 	font-size: 50px;
 	font-weight: bold;
-	margin-left: 290px;
 	margin-bottom: 20px;
 }
 
 .partie1-menu h5 {
 	color: #fff;
 	font-size: 17px;
-	margin-left: 290px;
 	font-weight: normal;
 }
 
@@ -137,7 +133,6 @@
 	padding: 15px 30px;
 	text-align: center;
 	text-decoration: none;
-	margin-left: 290px;
 	margin-top: 20px;
 }
 
