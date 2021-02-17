@@ -1,3 +1,194 @@
+* {
+	font-family: helvetica;
+	margin: 0;
+}
+
+/* Partie 1 */
+
+.partie1-menu {
+	display: block;
+	font-size: 12px;
+	background-color: #1a2d34;
+	border-bottom-left-radius: 54% 77px;
+	border-bottom-right-radius: 54% 86px;
+	padding-bottom: 185px;
+}
+
+/*----------MENU----------*/
+
+.menu-home {
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 30px;
+}
+
+	.menu-home a {
+		text-decoration: none;
+		color: #C1BFBF;
+		font-size: 15px;
+	}
+
+.saint-vincent {
+	text-decoration: none;
+	color: #FFF;
+	padding-left: 97px;
+	font-weight: bold;
+	margin-left: 190px;
+	float: left;
+	font-size: 20px;
+	padding-top: 30px;
+}
+
+.bouton-connexion {
+	background-color: #ec008c;
+	border: none;
+	border-radius: 18px;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 14px 24px;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-bottom: 120px;
+}
+
+.fas {
+	padding-right: 30px;
+	color: #C1BFBF;
+	font-size: 10px;
+}
+
+/*----------PRESENTATION----------*/
+
+
+.arrondi1 {
+	width: 744.5px;
+	height: 501px;
+	background: #ec008c;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 36px;
+	border-top-left-radius: 880px 876px;
+	border-top-right-radius: 566px 587px;
+	border-bottom-left-radius: 7px 74px;
+	border-bottom-right-radius: 900px 68px;
+	margin-left: 51%;
+	position: absolute;
+	margin-top: -17px;
+}
+
+.arrondi2 {
+	width: 550px;
+	height: 393px;
+	background: #EC1C97;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 36px;
+	border-top-left-radius: 100px 100px;
+	border-top-right-radius: 566px 587px;
+	border-bottom-left-radius: 354px 255px;
+	border-bottom-right-radius: 1215px 1150px;
+	margin-left: 60%;
+	position: absolute;
+	margin-top: 80px;
+	transform: rotate(359deg);
+}
+
+.photo_principale {
+	float: right;
+	height: 360px;
+	position: relative;
+	width: 520px;
+	padding-top: 15px;
+}
+
+.partie1-menu h1 {
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.partie1-menu h5 {
+	color: #fff;
+	font-size: 17px;
+	font-weight: normal;
+}
+
+.description-partie2 {
+	display: block;
+	padding-bottom: 3px;
+}
+
+.bouton-cta {
+	background-color: #ec008c;
+	border: none;
+	border-radius: 24px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+
+/* Partie 2 */
+
+/*----------CATEGORIES----------*/
+
+.partie2-categories {
+	display: block;
+	font-size: 12px;
+}
+
+
+#maindiv {
+	padding-bottom: 50px;
+	margin-left: 290px;
+	margin-top: 100px;
+}
+
+.explications {
+	margin: 0 auto;
+}
+
+.colonne1 {
+	float: left;
+	margin: 0 auto;
+	padding-right: 30px;
+	display: inline-block;
+}
+
+.colonne2 {
+	display: inline-block;
+	float: left;
+	margin: 0 auto;
+	padding-right: 30px;
+}
+
+.colonne3 {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.titre-categories {
+	font-weight: bold;
+	font-size: 17px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.paragraphe-categories {
+	font-weight: bold;
+	color: #6B6B6B;
+	font-size: 12.5px;
+}
+
 /* CSS PARTIE CAROUSEL */
 
 /* LINK */
