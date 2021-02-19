@@ -1,0 +1,20 @@
+html {
+    background-color: #323232;
+}
+
+#color {
+    background-color: #323232;
+    margin-top: 60px;
+}
+
+#inscription {
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 45px;
+    border-radius: 35px;
+    background-color: white;
+}
+
+h1, h2 {
+    text-align: center;
+}
