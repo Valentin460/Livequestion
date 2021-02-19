@@ -15,6 +15,6 @@
         <h2>Date de création :</h2>
         <h2>Nom de réponses obtenues :</h2>
         <h2>Nom d'utilisateur :</h2>
-        <h2>Contenu de la réponse</h2>
+        <h2>Contenu de la réponse :</h2>
     </body>
 </html>
