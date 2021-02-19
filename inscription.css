@@ -1,0 +1,92 @@
+html {
+	background-color:#323232;
+}
+
+#color {
+	background-color:#323232;
+	margin-top:60px;
+}
+
+#inscription {
+	margin-right:10%;
+	margin-left:10%;
+	padding:45px;
+	border-radius:5px;
+	background-color:white;
+}
+
+h3 {
+	text-align:center;
+}
+
+h2 {
+	text-align:center;
+}
+
+.span {
+	color:#EC1C97;
+	font-size:35px;
+}
+
+#formulaire {
+	margin-right:10%;
+}
+
+#name {
+	width:75%;
+}
+
+#mail {
+	width:75%;
+}
+
+#genre {
+	width:25%;
+}
+
+#mdp {
+	width:75%;
+}
+
+#verifyMdp {
+	width:75%;
+}
+
+#name, #mail, #genre, #mdp, #verifyMdp {
+	border-top-style:none;
+	border-right-style:none;
+	border-left-style:none;
+	border-radius:0px;
+	text-decoration:none;
+	border-bottom:2px solid #EC1C97;
+	box-shadow:none;
+	outline:none;
+}
+
+#but {
+	background-color:#E50F7C;
+	border:none;
+}
+
+.verif {
+	font-size:14px;
+	color:#929292;
+	margin-left:5%;
+}
+
+.verif p {
+	margin-left:3%;
+}
+
+/*background: linear-gradient(0, #E50F7C 30%, #FFFFFF 30%);*/
+
+#condition {
+	font-size:14px;
+	color:#929292;
+}
+
+#utilisation {
+	font-size:14px;
+	color:#929292;
+	text-decoration:underline;
+}

@@ -55,6 +55,8 @@ h2 {
     border-radius: 0px;
     text-decoration: none;
     border-bottom: 2px solid #EC1C97;
+    box-shadow:none;
+	outline:none;
 }
 
 #but {
@@ -70,4 +72,14 @@ h2 {
 
 .verif p {
     margin-left: 3%;
+}
+
+#cat {
+    box-shadow:none;
+	outline:none;
+}
+
+#selectCat {
+    box-shadow:none;
+	outline:none;
 }

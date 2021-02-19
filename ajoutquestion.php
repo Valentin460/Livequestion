@@ -21,8 +21,8 @@
                             <input type="text" name="titrequestion" class="form-control" placeholder="Nom" id="name">
                         </div>
                         <div class="form-group">
-                            <label for="categorie">Catégorie</label>
-                            <select class="form-control" name="catetogie">
+                            <label for="categorie" id="cat">Catégorie</label>
+                            <select class="form-control" name="catetogie" id="selectCat">
                                 <option>Cinéma</option>
                                 <option>Maths</option>
                                 <option>Français</option>
