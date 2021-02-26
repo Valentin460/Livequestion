@@ -11,78 +11,73 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <section class="partie1-menu">
-            <a class="saint-vincent">Saint Vincent BTS 1</a>
-                <div class="menu-home">
-                    <a href="#" class="menu-liens"> Lien1</a>
-                    <i class="fas fa-caret-down"></i>
-                    <a href="#" class="menu-liens">Lien2</a>
-                    <i class="fas fa-caret-down"></i>
-                    <a href="#" class="menu-liens">Lien3</a>
-                    <i class="fas fa-caret-down"></i>
-                    <a href="#" class="menu-liens">Lien4</a>
-                    <i class="fas fa-caret-down"></i>
-                    <button class="bouton-connexion">Se connecter</button>
-                </div>
-                <div class="arrondi1"></div>
-                <div class="arrondi2"></div>
-                <div class="container">
-                <img src="images/step-1.png" alt="image principale" class="photo_principale">
-                    <h1>Lorem Ipsum <span>dolor sit </span>amet .</h1>
-                    <div>
-                        <h5>
-                            <span>Sed elit libero, accumsan et volutpat id, aliquam</span>
-                            <span>tristique odio. Mauris sed lectus a justo malesuada </span>
-                            <span>dapibus. Morbi eleifend tellus nisi, sed ullamcorper </span>
-                            <span> mi tincidunt faucibus. Mauris justo tortor, tempor </span>
-                            <span>ut odio in, dictum malesuada eros. </span>
-                        </h5>
-                        <div>
-                            <button class="bouton-cta">Bouton CTA</button>
-                        </div>
-                    </div>
-             </div>
-        </section>
+        <section class="main">
+			<div class="accueil col-xl-8 col-10">
+				<nav class="navbar">
+					<h1 class="titre-logo">Saint Vincent BTS 1</h1>
+					<ul class="navbar">
+						<li class="nav-item">
+							<a href="#" class="nav-link lien-nav">Lien1</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link lien-nav">Lien2</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link lien-nav">Lien3</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link lien-nav">Lien4</a>
+						</li>
+						<li class="nav-item-connect">
+							<div class="btn-connexion">
+								<a href="connexion.php" class="nav-link">Se connecter</a>
+							</div>
+						</li>
+						<div class="dropdown">
+							<button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-bars fa-3x"></i>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							  <a class="dropdown-item" href="#">Lien1</a>
+							  <a class="dropdown-item" href="#">Lien2</a>
+							  <a class="dropdown-item" href="#">Lien3</a>
+							  <a class="dropdown-item" href="#">Lien4</a>
+							</div>
+						</div>
+					</ul>
+				</nav>
+				<div class="presentation">
+					<div class="texte-presentation">
+						<h2 class="titre-presentation">Lorem ipsum dolor sit amet.</h2>
+						<p class="para-presentation">Quod id modi obcaecati, eos officia odio numquam ex ipsa tenetur minima laborum facere soluta natus libero molestias, corrupti beatae maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officia libero, quam reprehenderit ipsum nemo repellendus.</p>
+						<div class="btn-cta">Bouton CTA</div>
+					</div>
+					<div class="image-presentation"></div>
+				</div>
+			</div>
+		</section>
+		<div class="arrondi_haut_presentation"></div>
 
 
-        <section id="partie2-categories">
-            <div class="container" id="maindiv">
-                <div class="explications">
-                    <div class="colonne1">
-                        <img src="images/i1.png">
-                        <div class="titre">Suits Your Style</div>
-                        <div class="paragraphe-categories">
-                            <p>
-                                <span class="description-partie2">Drogon sed ut perspiciatis unde omnis iste error</span>
-                                <span class="description-partie2">sit volupatmen accusantium doloremque</span>
-                                <span class="description-partie2">laudantium, totam aperiam, eaque Arya.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="colonne2">
-                        <img src="images/i2.png">
-                        <div class="titre">Ut posuere molestie</div>
-                        <div class="paragraphe-categories">
-                            <p>
-                                <span class="description-partie2">Duis convallis convallis tellus imp interdum. Non</span>
-                                <span class="description-partie2">diam phasellus vestibulum lorem sed </span> risus ultricies Tyrion. Enim blandit volutpat
-                            </p>
-                        </div>
-                    </div>
-                    <div class="colonne3">
-                        <img src="images/i3.png">
-                        <div class="titre">Vestibulum ut erat consectetur</div>
-                        <div class="paragraphe-categories">
-                            <p>
-                                <span class="description-partie2">Eunuch sed blandit libero volutpat sed cras.</span>
-                                <span class="description-partie2">Cersei quis imperdiet tincidunt unuch pulvinar</span>
-                                <span class="description-partie2">sapien.Habitasse platea Davos vestibulum.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<section class="main2">
+			<div class="description-presentation col-xl-8 col-10 container-fluid">
+				<div class="conteneur mr-5">
+					<div class="icone-accueil eclair"></div>
+					<h3 class="sous-titre-accueil">Suits Your Style</h3>
+					<p class="para-accueil">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at cum laudantium omnis. Amet saepe architecto dolorum voluptatibus aperiam? Nesciunt repudiandae cumque velit expedita eum quasi quisquam a, voluptatem veritatis.</p>
+				</div>
+				<div class="conteneur mr-5">
+					<div class="icone-accueil marqueur"></div>
+					<h3 class="sous-titre-accueil">Ut posuere molestie</h3>
+					<p class="para-accueil">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, fuga. Perspiciatis reiciendis, eos commodi odio amet optio tempora sapiente ut porro voluptatibus repellat. Ex unde cum, aut ut excepturi suscipit.</p>
+				</div>
+				<div class="conteneur">
+					<div class="icone-accueil cadre-logo"></div>
+					<h3 class="sous-titre-accueil">Vestibulum ut erat consectetur</h3>
+					<p class="para-accueil">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, voluptas iste dolor deserunt accusamus quis cum unde consequatur mollitia, deleniti asperiores laborum consequuntur. Autem quam illum fugit nostrum blanditiis eaque.</p>
+				</div>
+			</div>
+		</section>
         <section id="link">
             <div class="container">
                 <section id="linkHeader">
