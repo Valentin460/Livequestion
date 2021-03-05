@@ -32,6 +32,7 @@
 
                 $query->execute();
 
+
             }
         }
 		else {
@@ -70,6 +71,9 @@
 					<button type="submit" name="submit" class="btn btn-primary" id="but">S'inscrire</button>
 					<p id="condition">En vous inscrivant, vous acceptez nos <span id="utilisation">conditions d'utilisation</span></p>
 				</form>
+				<div>
+					<h5>Vous avez déjà un compte ? <a href="connexion.php">Connectez-vous</a></h5>
+				</div>
 			</div>
 		</div>
 	</div>
