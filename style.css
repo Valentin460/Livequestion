@@ -232,7 +232,7 @@ i{
 
 /*--------------------Media queries--------------------*/
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1200px) {
 	.titre-logo {
 		font-size: 1.5rem;
 		margin-top: 8px;
