@@ -17,16 +17,16 @@
 					<h1 class="titre-logo">Saint Vincent BTS 1</h1>
 					<ul class="navbar">
 						<li class="nav-item">
-							<a href="#" class="nav-link lien-nav">Lien1</a>
+							<a href="#" class="nav-link lien-nav" style="margin: 0; font-size: 18px;">Lien1<i class="fas fa-caret-down"></i></a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link lien-nav">Lien2</a>
+							<a href="#" class="nav-link lien-nav" style="margin: 0; font-size: 18px;">Lien2<i class="fas fa-caret-down"></i></a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link lien-nav">Lien3</a>
+							<a href="#" class="nav-link lien-nav" style="margin: 0; font-size: 18px;">Lien3<i class="fas fa-caret-down"></i></a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link lien-nav">Lien4</a>
+							<a href="#" class="nav-link lien-nav" style="margin: 0; font-size: 18px;">Lien4<i class="fas fa-caret-down"></i></a>
 						</li>
 						<li class="nav-item-connect">
 							<div class="btn-connexion">
@@ -49,7 +49,7 @@
 				<div class="presentation">
 					<div class="texte-presentation">
 						<h2 class="titre-presentation">Lorem ipsum dolor sit amet.</h2>
-						<p class="para-presentation">Quod id modi obcaecati, eos officia odio numquam ex ipsa tenetur minima laborum facere soluta natus libero molestias, corrupti beatae maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officia libero, quam reprehenderit ipsum nemo repellendus.</p>
+						<p class="para-presentation">Sed elit libero, accumsan et volutpat id, aliquam tristique odio. Mauris sed lectus a justo malesuada dapibus. Morbi eleifend tellus nisi, sed ullamcorper mi tincidunt faucibus. Mauris justo tortor, tempor ut odio in, dictum malesuada eros. </span></p>
 						<div class="btn-cta">Bouton CTA</div>
 					</div>
 					<div class="image-presentation"></div>
@@ -64,17 +64,17 @@
 				<div class="conteneur mr-5">
 					<div class="icone-accueil eclair"></div>
 					<h3 class="sous-titre-accueil">Suits Your Style</h3>
-					<p class="para-accueil">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at cum laudantium omnis. Amet saepe architecto dolorum voluptatibus aperiam? Nesciunt repudiandae cumque velit expedita eum quasi quisquam a, voluptatem veritatis.</p>
+					<p class="para-accueil">Drogon sed ut perspiciatis unde omnis iste error sit volupatmen accusantium doloremque laudantium, totam aperiam, eaque Arya.</p>
 				</div>
 				<div class="conteneur mr-5">
 					<div class="icone-accueil marqueur"></div>
 					<h3 class="sous-titre-accueil">Ut posuere molestie</h3>
-					<p class="para-accueil">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, fuga. Perspiciatis reiciendis, eos commodi odio amet optio tempora sapiente ut porro voluptatibus repellat. Ex unde cum, aut ut excepturi suscipit.</p>
+					<p class="para-accueil">Duis convallis convallis tellus imp interdum. Non diam phasellus vestibulum lorem sed risus ultricies Tyrion. Enim blandit volutpat</p>
 				</div>
 				<div class="conteneur">
 					<div class="icone-accueil cadre-logo"></div>
 					<h3 class="sous-titre-accueil">Vestibulum ut erat consectetur</h3>
-					<p class="para-accueil">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, voluptas iste dolor deserunt accusamus quis cum unde consequatur mollitia, deleniti asperiores laborum consequuntur. Autem quam illum fugit nostrum blanditiis eaque.</p>
+					<p class="para-accueil">Eunuch sed blandit libero volutpat sed cras. Cersei quis imperdiet tincidunt unuch pulvinar sapien. Habitasse platea Davos vestibulum.</p>
 				</div>
 			</div>
 		</section>
