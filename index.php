@@ -35,7 +35,7 @@
 						</li>
 						<div class="dropdown">
 							<button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fas fa-bars fa-3x"></i>
+								<i class="barre-mobile fas fa-bars fa-3x" style="color: #FFFFFF", style="margin-left: 20px";></i>
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 							  <a class="dropdown-item" href="#">Lien1</a>

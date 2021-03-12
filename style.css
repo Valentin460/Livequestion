@@ -82,6 +82,11 @@
 	margin: 0 10px;
 }
 
+i{
+	color: #FFFFFF;
+	margin-left: 20px;
+}
+
 .dropdown-menu {
 	position: absolute !important;
 }
