@@ -10,12 +10,12 @@ Dans ce site internet il sera possible à un utilisateur de :
 - poser des questions et y répondre
 - afficher le profil de chaque utilisateur
 
-Une administration du site sera accessible afin de modérer les questions ainsi que les utilisateurs
+Une administration du site sera accessible afin de modérer les questions ainsi que les utilisateurs.
 
 Si vous souhaitez téléchager notre projet, rien de plus simple :
-- téléchagez et décompressez le .zip
+- téléchargez et décompressez le .zip
 - démarrez votre serveur local (ex : UwAmp)
-- accedez à votre administration phpmyadmin (taper localhost sur la barre d'adresse de votre navigateur et sélectionnez mysql et connectez-vous)
+- accédez à votre administration phpmyadmin (taper localhost sur la barre d'adresse de votre navigateur et sélectionnez mysql et connectez-vous)
 - importez la base de données présente à la racine du dossier Livequestion
 - copiez coller le dossier Livequestion dans le dossier "www" présent dans "C:\UwAmp\www" (ou équivalent s'il n'est pas stocké sur le répertoire par défaut)
 - accédez au site en tapant localhost et en sélectionnant "Livequestion"
