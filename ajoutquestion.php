@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
@@ -15,7 +16,7 @@
             <div class="container">
                 <div id="inscription">
                     <h2><span class="span">Ajouter une question</span></h2>
-                    <form id="formulaire">
+                    <form id="formulaire" method="POST" action="ajoutquestion.php">
                         <div class="form-group">
                             <label for="name">Titre de la question</label>
                             <input type="text" name="titrequestion" class="form-control" placeholder="Nom" id="name">
