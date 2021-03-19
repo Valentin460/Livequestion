@@ -11,14 +11,11 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div>
-        <!-- A faire : Ajout PHP afin d'avoir un site dynamique-->
-            <h1>Bienvenue Utilisateur<h1>
-            <h2>Titre question :</h2>
-            <h2>Date de création :</h2>
-            <h2>Nom de réponses obtenues :</h2>
-            <h2>Nom d'utilisateur :</h2>
-            <h2>Contenu de la réponse :</h2>
-        </div>
+        <h1>Bienvenue Utilisateur<h1>
+        <h2>Titre question :</h2>
+        <h2>Date de création :</h2>
+        <h2>Nom de réponses obtenues :</h2>
+        <h2>Nom d'utilisateur :</h2>
+        <h2>Contenu de la réponse :</h2>
     </body>
 </html>
