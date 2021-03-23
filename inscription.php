@@ -41,7 +41,7 @@
 		<div class="container">
 			<div id="inscription">
 				<h2><span class="span">Créez votre compte gratuitement<span></h2>
-				<form id="formulaire" method="post">
+				<form id="formulaire" method="post" action="index.php">
 					<div class="form-group">
 						<input type="text" name="name" class="form-control" placeholder="Pseudo" id="name">
 					</div>

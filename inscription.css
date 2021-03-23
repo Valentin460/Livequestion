@@ -25,7 +25,13 @@ h2 {
 
 h5 a {
 	background: linear-gradient(0, #E50F7C 30%, #FFFFFF 30%);
+	color:black;
 	text-decoration:none;
+}
+
+h5 a:hover {
+	text-decoration:none;
+	color:black;
 }
 
 .span {
