@@ -11,11 +11,17 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <h1>Bienvenue Utilisateur<h1>
-        <h2>Titre question :</h2>
-        <h2>Date de création :</h2>
-        <h2>Nom de réponses obtenues :</h2>
-        <h2>Nom d'utilisateur :</h2>
-        <h2>Contenu de la réponse :</h2>
+        <h1>Bienvenue Utilisateur</h1>
+        <div class="general">
+            <div class="left">
+                <h2>Titre de la question :</h2>
+                <h2>Date de création :</h2>
+                <h2>Nombre de réponses obtenues :<h2>
+            </div>
+            <div class="right">
+                <h2>Nom d'utilisateur :</h2>
+                <h2>Contenu de la réponse :</h2>
+            </div>
+        </div>
     </body>
 </html>
