@@ -19,7 +19,7 @@
                 $pseudo = $_POST['name'];
                 $email = $_POST['email'];
 				$genre = $_POST['genre'];
-				$password = $_POST['password'];
+				$mot_de_passe = $_POST['password'];
 
                 $co = connexionBdd();
 
@@ -41,7 +41,7 @@
 		<div class="container">
 			<div id="inscription">
 				<h2><span class="span">Créez votre compte gratuitement<span></h2>
-				<form id="formulaire" method="post" action="index.php">
+				<form id="formulaire" method="post" action="">
 					<div class="form-group">
 						<input type="text" name="name" class="form-control" placeholder="Pseudo" id="name">
 					</div>

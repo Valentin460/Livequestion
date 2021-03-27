@@ -17,7 +17,7 @@
 			if(isset($_POST['name'], $_POST['password'])) {
 
 				$pseudo = $_POST['name'];
-				$password = $_POST['password'];
+				$mot_de_passe = $_POST['password'];
 
 				$co = connexionBdd();
 
