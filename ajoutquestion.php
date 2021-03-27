@@ -12,6 +12,26 @@
         <script src="script.js"></script>
     </head>
     <body>
+
+    <?php
+        require('db/fonctions.php');
+        if(isset($_POST['submit'])){
+            if(isset($_POST['titrequestion'], $_POST['cat'])){
+                $titre = $_POST['titrequestion'];
+                $cat_id = $_POST['cat'];
+
+                $co = connexionBdd();
+
+                $query = $co->prepare("INSERT into questions (titre, cat_id, date_crea) VALUES (:titre, :cat_id, now())");
+
+                $query->bindParam(':titre', $titre);
+                $query->bindParam(':cat_id', $cat_id);
+
+                $query->execute();
+            }
+        }
+        else{
+    ?>
         <div id="color">
             <div class="container">
                 <div id="inscription">
@@ -24,15 +44,18 @@
                         <div class="form-group">
                             <label for="categorie" id="cat">Catégorie</label>
                             <select class="form-control" name="catetogie" id="selectCat">
-                                <option>Cinéma</option>
-                                <option>Maths</option>
-                                <option>Français</option>
-                                <option>Technologie</option>
+                                <option name="cat">Cinéma</option>
+                                <option name="cat">Maths</option>
+                                <option name="cat">Français</option>
+                                <option name="cat">Technologie</option>
                             </select>
                         <button type="submit" class="btn btn-primary" id="but">Ajouter la question</button>
                     </form>
                 </div>
             </div>
         </div>
+        <?php
+            }
+        ?>
     </body>
 </html>
