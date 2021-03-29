@@ -137,6 +137,7 @@ i{
 
 .main2 {
 	background-color: white;
+	height: 290px;
 }
 
 .main3 {
@@ -512,7 +513,7 @@ i{
 }
 
 #slide h2 {
-	font-size:44px;
+	font-size:45px;
 }
 
 #slide h2 span {
@@ -723,7 +724,8 @@ footer {
 }
 
 #faq p {
-    font-size: 20px;
+    font-size: 30px;
+	font-weight: bold;
 }
 
 #faq h4 {
