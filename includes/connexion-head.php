@@ -14,6 +14,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanses="false">Mon profil</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php" role="button" aria-haspopup="true" aria-expanses="false">Déconnexion</a>
+            </li>
         </ul>
     </div>
 </nav>
