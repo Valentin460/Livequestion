@@ -9,10 +9,10 @@
                 <a class="nav-link" href="hConnexion.php">Les questions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#questionModal">Poser une question</a>
+                <a class="nav-link" href="ajoutquestion.php" role="button" aria-haspopup="true" aria-expanses="false">Poser une question</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanses="false">Mon profil</a>
+                <a class="nav-link" href="vuemembre.php" role="button" aria-haspopup="true" aria-expanses="false">Mon profil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php" role="button" aria-haspopup="true" aria-expanses="false">Déconnexion</a>
