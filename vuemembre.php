@@ -11,6 +11,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
+<?php
+	include("includes/connexion-head.php");
+?>
 	<div id="color">
 		<div class="container">
 			<div class="animate-area">
