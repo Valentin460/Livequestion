@@ -13,24 +13,35 @@
 
 	<?php
 		require('db/fonctions.php');
+
+		session_start();
+
+		$co = connexionBdd();
+
 		if(isset($_POST['submit'])){
-			if(isset($_POST['name'], $_POST['password'])) {
 
-				$pseudo = $_POST['name'];
-				$mot_de_passe = $_POST['password'];
+				$pseudo = $_POST['pseudo'];
+				$mot_de_passe = hash('sha256', $_POST['password']);
 
-				$co = connexionBdd();
-
-				$query = $co->prepare("SELECT into utilisateurs (pseudo, mot_de_passe) VALUES (:pseudo, :mot_de_passe");
+				$query = $co->prepare('SELECT * FROM utilisateurs WHERE pseudo=:login and password=:pass');
 
 				$query->bindParam(':pseudo', $pseudo);
 				$query->bindParam(':mot_de_passe', $mot_de_passe);
 
 				$query->execute();
 
-			}
+				$result = $query->fetchall();
+
+				$rows = $query->rowCount();
+
+				if ($rows==1){
+					$_SESSION['username'] = $username;
+
+					header("Location: vuemembre.php");
+				}else{
+					$message = "Le nom d'utilisateur ou le mot de passe est incorrect";
+				}
 		}
-		else {
 		?>
 		<div id="color">
 			<div class="container">
@@ -38,7 +49,7 @@
 					<h2><span class="span">Connexion<span></h2>
 					<form id="formulaire" method="post">
 						<div class="form-group">
-							<input type="text" name="name" class="form-control" placeholder="Pseudo" id="name">
+							<input type="text" name="pseudo" class="form-control" placeholder="Pseudo" id="name">
 						</div>
 						<div class="form-group">
 							<input type="password" name="password" id="mdp" class="form-control" placeholder="Mot de passe">
@@ -46,6 +57,10 @@
 						<div>
 							<button type="submit" class="btn btn-primary" id="but">Se connecter</button>
 						</div>
+						<?php
+							if (!empty($message)){ ?>
+							<p><?php echo $message; ?></p>
+						<?php } ?>
 					</form>
 					<div>
 						<h5>Vous n'avez pas de compte ? <a href="inscription.php">Inscrivez-vous</a></h5>
@@ -53,8 +68,5 @@
 				</div>
 			</div>
 		</div>
-		<?php
-		}
-		?>
 </body>
 </html>

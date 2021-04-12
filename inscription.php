@@ -19,7 +19,7 @@
                 $pseudo = $_POST['name'];
                 $email = $_POST['email'];
 				$genre = $_POST['genre'];
-				$mot_de_passe = $_POST['password'];
+				$mot_de_passe = hash('sha256', $_POST['password']);
 
                 $co = connexionBdd();
 
