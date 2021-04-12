@@ -60,7 +60,7 @@
 						<?php
 							if (!empty($message)){ ?>
 							<p><?php echo $message; ?></p>
-						<?php } ?>
+							<?php } ?>
 					</form>
 					<div>
 						<h5>Vous n'avez pas de compte ? <a href="inscription.php">Inscrivez-vous</a></h5>
