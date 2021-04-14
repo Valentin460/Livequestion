@@ -15,7 +15,7 @@
 		</li>
 		<li class="nav-item-connect">
 			<div class="btn-connexion">
-				<a href="connexion.php" class="nav-link">Se connecter</a>
+				<a href="connexion/connexion.php" class="nav-link">Se connecter</a>
 			</div>
 		</li>
 			<div class="dropdown">

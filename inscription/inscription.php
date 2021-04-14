@@ -12,7 +12,7 @@
 <body>
 	
 	<?php
-		 require('db/fonctions.php');
+		 require('../db/fonctions.php');
 		 if(isset($_POST['submit'])){
             if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'])) {
 
@@ -72,7 +72,7 @@
 					<p id="condition">En vous inscrivant, vous acceptez nos <span id="utilisation">conditions d'utilisation</span></p>
 				</form>
 				<div>
-					<h5>Vous avez déjà un compte ? <a href="connexion.php">Connectez-vous</a></h5>
+					<h5>Vous avez déjà un compte ? <a href="../connexion/connexion.php">Connectez-vous</a></h5>
 				</div>
 			</div>
 		</div>

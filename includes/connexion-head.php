@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="vuequestion.php">Les questions</a>
+                <a class="nav-link" href="../vuequestion/vuequestion.php">Les questions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ajoutquestion.php" role="button" aria-haspopup="true" aria-expanses="false">Poser une question</a>
+                <a class="nav-link" href="../ajoutquestion/ajoutquestion.php" role="button" aria-haspopup="true" aria-expanses="false">Poser une question</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="vuemembre.php" role="button" aria-haspopup="true" aria-expanses="false">Mon profil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="logout.php" role="button" aria-haspopup="true" aria-expanses="false">Déconnexion</a>
+                <a class="nav-link" href="../connexion/logout.php" role="button" aria-haspopup="true" aria-expanses="false">Déconnexion</a>
             </li>
         </ul>
     </div>

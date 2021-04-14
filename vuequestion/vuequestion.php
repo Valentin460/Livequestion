@@ -8,11 +8,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/d8cf10d130.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </head>
     <body>
     <?php
-        require_once("db/fonctions.php");
+        require_once("../db/fonctions.php");
         $co = connexionBdd();
     ?>
         <h1>Bienvenue Utilisateur</h1>

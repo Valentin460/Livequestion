@@ -12,14 +12,14 @@
 </head>
 <body>
 <?php
-	include("includes/connexion-head.php");
+	include("../includes/connexion-head.php");
 
 	// Récupération des données de la session
 	session_start();
 
 	// Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
 	if(!isset($_SESSION["pseudo"])){
-		header("Location: connexion.php");
+		header("Location: ../connexion/connexion.php");
 		exit(); 
 	}
 ?>
@@ -63,7 +63,7 @@
 
 				  <tbody>
 				  <?php
-					require 'db/fonctions.php';
+					require '../db/fonctions.php';
                     $co = connexionBdd();
                     $statement = $co->query('SELECT * FROM questions');
                     while($item = $statement->fetch())

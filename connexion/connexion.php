@@ -12,7 +12,7 @@
 <body>
 
 	<?php
-		require('db/fonctions.php');
+		require('../db/fonctions.php');
 
 		session_start();
 
@@ -37,7 +37,7 @@
 				if ($rows==1){
 					$_SESSION['pseudo'] = $pseudo;
 
-					header("Location: vuemembre.php");
+					header("Location: ../vuemembre/vuemembre.php");
 				}else{
 					$message = " Le nom d'utilisateur ou le mot de passe est incorrect";
 				}
@@ -63,7 +63,7 @@
 							<?php } ?>
 					</form>
 					<div>
-						<h5>Vous n'avez pas de compte ? <a href="inscription.php">Inscrivez-vous</a></h5>
+						<h5>Vous n'avez pas de compte ? <a href="../inscription/inscription.php">Inscrivez-vous</a></h5>
 					</div>
 				</div>
 			</div>
