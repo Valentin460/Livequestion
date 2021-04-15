@@ -28,4 +28,6 @@
         </tbody>
     </table>
     </body>
-</head>
+    <?php
+        include("../includes/connexion-footer.php");
+    ?>

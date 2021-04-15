@@ -56,5 +56,6 @@
 				</div>
 			</div>
 		</div>
-</body>
-</html>
+	<?php
+        include("../includes/connexion-footer.php");
+    ?>
