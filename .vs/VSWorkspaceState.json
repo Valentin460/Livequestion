@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ajoutquestion",
+    "\\connexion",
     "\\db",
-    "\\includes"
+    "\\includes",
+    "\\inscription",
+    "\\vuemembre",
+    "\\vuequestion"
   ],
-  "SelectedNode": "\\ajoutquestion.css",
+  "SelectedNode": "\\vuequestion\\vuequestion.php",
   "PreviewInSolutionExplorer": false
 }
