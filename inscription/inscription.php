@@ -23,7 +23,6 @@
 
             }
         }
-		else {
 		?>
 		<div id="color">
 		<div class="container">
@@ -65,9 +64,6 @@
 			</div>
 		</div>
 	</div>
-	<?php
-	}
-	?>
 	<?php
         include("../includes/connexion-footer.php");
     ?>
