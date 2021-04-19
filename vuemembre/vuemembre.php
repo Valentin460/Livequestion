@@ -11,67 +11,58 @@
 		exit(); 
 	}
 ?>
-	<div id="color">
-		<div class="container">
-			<div class="animate-area">
-				<nav>
-					<ul class="box-area">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</nav>
-			</div>
-			<section id="inscription">
-				<h2><span class="span">Votre Compte</span></h2>
-				<form id="formulaire">
-					<div class="form-group">
-						<label for="name">Nom d'utilisateur : <?php echo $_SESSION['pseudo']; ?></label>
-					</div>
-					<div class="form-group">
-						<label for="email">Email : </label>
-					</div>
-					<div class="form-group">
-						<label for="genre">Genre : </label>
-					</div>
-				</form>
-
-				<table class="table">
-				  <thead class="thead-dark">
-				    <tr>
-				   		<th scope="col">Questions</th>
-				        <th scope="col">Catégories</th>
-				        <th scope="col">Auteur</th>
-				        <th scope="col">Date</th>
-				    </tr>
-				  </thead>
-
-				  <tbody>
-				  <?php
-					require '../db/fonctions.php';
-                    $co = connexionBdd();
-                    $statement = $co->query('SELECT * FROM questions');
-                    while($item = $statement->fetch())
-					{
-						echo '<tr>';
-                        echo '<td>'. $item['titre'] . '</td>';
-                        echo '<td>'. $item['cat_id'] . '</td>';
-                        echo '<td>'. $item['auteur_id'] . '</td>';
-                        echo '<td>'. $item['date_crea'] . '</td>';
-                        echo '</td>';
-                        echo '</tr>';
-					}
-				    ?>
-				  </tbody>
-				</table>
-			</section>
-
-
-		</div>
-	</div>
+<head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container">
+  <div class="card profile">
+    <div class="content">
+      <div class="row">
+        <div class="col-sm-6 col-md-8">
+          <h2>Perrine COUPY</h2>
+          <p>perrinecoupy@gmail.com</p>
+          <p>Femme</p>
+        </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="indicator"><i class="material-icons">insert_drive_file</i><span>1 question</span></div>
+        </div>
+        <div class="col-sm-4">
+          <div class="indicator"><i class="material-icons">comment</i><span>1 réponse</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="torrents">
+    <div class="legend">
+      <div class="row">
+        <div class="col-md-6">Questions</div>
+        <div class="col-md-2">Catégories</div>
+        <div class="col-md-2">Auteurs</div>
+        <div class="col-md-1">Dates</div>
+      </div>
+    </div>
+    <div class="torrent">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="title">Comment s'appelle la femelle du chien ?</div>
+          <div class="category">Une chienne</div>
+        </div>
+        <div class="col-md-2">Animal</div>
+        <div class="col-md-2">Perrine C</div>
+        <div class="col-md-1">
+          <div class="upload">19/04/2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 	<?php
         include("../includes/connexion-footer.php");
     ?>

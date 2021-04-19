@@ -1,145 +1,98 @@
-html {
-	background-color:#323232;
+body {
+	background-color: #405063;
+	font-family: Roboto;
 }
 
-#color {
-	background-color:#323232;
+.card {
+	color: white;
 }
 
-#inscription {
-	margin-top:50px;
-	margin-right:10%;
-	margin-left:10%;
-	padding:45px;
-	border:1px solid black;
-	border-radius:35px;
-	background-color:white;
+	.card .content {
+		padding: 30px;
+		background-color: #405063;
+	}
+
+	.card.profile .indicator i {
+		color: #405063;
+		vertical-align: middle;
+		font-size: 4rem;
+		margin-right: 15px;
+	}
+
+	.card.profile .upload, .card.profile .download {
+		text-align: center;
+	}
+
+		.card.profile .upload i, .card.profile .upload .unit, .card.profile .download i, .card.profile .download .unit {
+			color: #6e7a88;
+		}
+
+		.card.profile .upload .value, .card.profile .download .value {
+			font-size: 3rem;
+			font-weight: 200;
+		}
+
+	.card.profile .mp {
+		text-align: right;
+	}
+
+		.card.profile .mp a.btn {
+			background-color: #202933;
+			color: #fff;
+			padding: 10px;
+		}
+
+			.card.profile .mp a.btn i {
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+
+	.card .card-footer {
+		padding: 30px;
+		background-color: #262f3b;
+		padding-left: 370px;
+	}
+
+		.card .card-footer i {
+			color: #6e7a88;
+		}
+
+.torrents {
+	margin-top: 30px;
 }
 
-h2 {
-	text-align:center;
-}
+	.torrents > div:nth-child(odd) {
+		background-color: #EB038A;
+	}
 
-.span {
-	background: linear-gradient(0, #E50F7C 30%, #FFFFFF 30%);
-	font-size:35px;
-}
+	.torrents > div:nth-child(even) {
+		background-color: #262f3b;
+	}
 
-#formulaire {
-	margin-right:10%;
-	margin-top: 5%;
-}
+	.torrents .legend {
+		padding: 15px;
+	}
 
-#name {
-	width:75%;
-}
+	.torrents .torrent {
+		padding: 15px;
+	}
 
-#mail {
-	width:75%;
-}
+		.torrents .torrent > .row {
+			display: flex;
+			align-items: center;
+		}
 
-#genre {
-	width:25%;
-}
+		.torrents .torrent .title {
+			font-size: 1.5rem;
+			margin-left: 36px;
+		}
 
+		.torrents .torrent .category {
+			color: #6e7a88;
+			margin-left: 36px;
+		}
 
-
-#name, #mail, #genre, {
-	border-top-style:none;
-	border-right-style:none;
-	border-left-style:none;
-	border-radius:0px;
-	text-decoration:none;
-	border-bottom:1px solid #323232;
-}
-
-/*Cubes qui volent*/
-.animation-area{
-    background: linear-gradient(to left, black, red);
-    width: 100%;
-    height: 100%;
-}
-
-.box-area{
-    position: static;
-    top: 0;
-    left: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
-.box-area li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 25px;
-    height: 25px;
-    background: rgba(255,255,255,0.2);
-    animation: animate 5s linear infinite;
-    top: 300px;
-}
-
-.box-area li:nth-child(1){
-    left: 86%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-}
-
-.box-area li:nth-child(2){
-    left: 12%;
-    width: 30px;
-    height: 30px;
-    animation-delay: 1.5s;
-    animation-duration: 10s;
-}
-
-.box-area li:nth-child(3){
-    left: 70%;
-    width: 100px;
-    height: 100px;
-    animation-delay: 5.5s;
-}
-
-.box-area li:nth-child(4){
-    left: 42%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 15s;
-}
-
-.box-area li:nth-child(5){
-    left: 65%;
-    width: 40px;
-    height: 40px;
-    animation-delay: 0s;
-}
-
-.box-area li:nth-child(5){
-    left: 15%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3.5s;
-}
-
-@keyframes animate{
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-800px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-td {
-	font-size: 12px;
-	text-align: center;
-}
-   
-.thead-dark {
-	font-size: 14px;
-	text-align: center;
-}
+	.torrents .legend .row {
+		margin-right: 20px;
+		margin-left: 20px;
+	}

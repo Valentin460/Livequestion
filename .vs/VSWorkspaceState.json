@@ -1,16 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\administration",
-    "\\ajoutquestion",
-    "\\connexion",
-    "\\db",
-    "\\includes",
-    "\\inscription",
-    "\\traitement",
-    "\\vuemembre",
-    "\\vuequestion"
+    ""
   ],
-  "SelectedNode": "\\inscription\\inscription.php",
   "PreviewInSolutionExplorer": false
 }
