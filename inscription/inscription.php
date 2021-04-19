@@ -1,28 +1,11 @@
 	<?php
 		 include("../includes/head.php");
 		 require('../db/fonctions.php');
-		 if(isset($_POST['submit'])){
-            if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'])) {
-
-                $pseudo = $_POST['name'];
-                $email = $_POST['email'];
-				$genre = $_POST['genre'];
-				$mot_de_passe = hash('sha256', $_POST['password']);
-
-                $co = connexionBdd();
-
-                $query = $co->prepare("INSERT into utilisateurs (pseudo, email, genre, mot_de_passe, date_inscription) VALUES (:pseudo, :email, :genre, :mot_de_passe, now())");
-
-                $query->bindParam(':pseudo', $pseudo);
-                $query->bindParam(':email', $email);
-				$query->bindParam(':genre', $genre);
-				$query->bindParam(':mot_de_passe', $mot_de_passe);
-
-                $query->execute();
-
-
-            }
-        }
+		 // Vérification des données saisies dans les champs du formulaire
+			require('../traitement/traitement_inscription.php');
+			if (!empty($_POST)) {
+				$traitement = traitementInscription($_POST);
+			}
 		?>
 		<div id="color">
 		<div class="container">
@@ -31,9 +14,21 @@
 				<form id="formulaire" method="post" action="">
 					<div class="form-group">
 						<input type="text" name="name" class="form-control" placeholder="Pseudo" id="name">
+						<p><?php
+							if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['name'])){
+								echo $traitement['erreurs']['name'];
+							}
+							?>
+						</p>
 					</div>
 					<div class="form-group">
 						<input type="email" name="email" class="form-control" placeholder="E-mail" id="mail">
+						<p><?php
+							if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['email'])){
+								echo $traitement['erreurs']['email'];
+							}
+							?>
+						</p>
 					</div>
 					<div class="form-group">
 						<label for="genre">Genre</label>
@@ -50,9 +45,21 @@
 								<p>1 chiffre</p>
 								<p>1 Majuscule</p>
 							</div>
+							<p><?php
+									if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['password'])){
+										echo $traitement['erreurs']['password'];
+									}
+								?>
+							</p>
 						</div>
 						<div class="form-group col-lg-6">
 							<input type="password" name="verifyPassword" id="verifyMdp" class="form-control" placeholder="Vérification mot de passe">
+							<p><?php
+								if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['verifyPassword'])){
+									echo $traitement['erreurs']['verifyPassword'];
+								}
+								?>
+							</p>
 						</div>
 					</div>
 					<button type="submit" name="submit" class="btn btn-primary" id="but">S'inscrire</button>
