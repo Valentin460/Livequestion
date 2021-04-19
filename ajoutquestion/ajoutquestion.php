@@ -27,7 +27,7 @@
                         <div class="form-group">
                             <label for="categorie" id="cat">Catégorie</label>
                             <select class="form-control" name="catetogie" id="selectCat">
-                                <option value="categories"></option>
+                                <option value="categories" name="categories"></option>
                                 <?php
 							    $categories = connexionBdd()->query('SELECT nom FROM categories')->fetchAll();
 
