@@ -1,19 +1,11 @@
 <?php
         include("../includes/head.php");
         require('../db/fonctions.php');
-        if(isset($_POST['submit'])){
-            if(isset($_POST['titrequestion'])){
-                $titre = $_POST['titrequestion'];
-
-                $co = connexionBdd();
-
-                $query = $co->prepare("INSERT into questions (titre, date_crea) VALUES (:titre, now())");
-
-                $query->bindParam(':titre', $titre);
-
-                $query->execute();
-            }
-        }
+        // Vérification des données saisies dans les champs du formulaire
+			require('../traitement/traitement_ajoutquestion.php');
+			if (!empty($_POST)) {
+				$traitement = traitementAjoutQuestion($_POST);
+			}
     ?>
         <div id="color">
             <div class="container">
@@ -23,6 +15,12 @@
                         <div class="form-group">
                             <label for="name">Titre de la question</label>
                             <input type="text" name="titrequestion" class="form-control" placeholder="Nom" id="name">
+                            <p><?php
+							if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['titrequestion'])){
+								echo $traitement['erreurs']['titrequestion'];
+							}
+							?>
+						</p>
                         </div>
                         <div class="form-group">
                             <label for="categorie" id="cat">Catégorie</label>
@@ -36,6 +34,7 @@
                                 }
                                 ?>
                             </select>
+						</p>
                         <button type="submit" name="submit" class="btn btn-primary" id="but">Ajouter la question</button>
                     </form>
                 </div>
