@@ -30,6 +30,21 @@
                         <p>Réponse à la question (Select ici aussi)</p>
                     </div>
                 </div>
+                <?php
+                    
+                    $co = connexionBdd();
+
+                    if(isset($_POST['submit'])){
+
+				        $reps = $_POST['reps'];
+
+				        $query = $co->prepare('INSERT into reponses(rep_quest, date) VALUES(:rep_quest, now())');
+
+				        $query->bindParam(':rep_quest', $reps);
+
+				        $query->execute();
+		        }
+                ?>
                 <div id="repondre">
                     <h4>Répondre à la question</h4>
                     <form method="post">
