@@ -1,38 +1,49 @@
-html {
-    background-color: #323232;
+section {
+    margin-top: 35px;
+    background-color: #E8EEF0;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-right: 7%;
+    margin-left: 7%;
+    border-radius: 5px;
 }
 
-#color {
-    background-color: #323232;
-    margin-top: 60px;
+#quest {
+    padding-bottom: 10px;
 }
 
-#inscription {
-    margin-right: 10%;
-    margin-left: 10%;
-    padding: 45px;
-    border-radius: 35px;
-    background-color: white;
+    #quest li {
+        list-style: none;
+        display: flex;
+    }
+
+    #quest p {
+        background-color: white;
+        padding: 5px;
+        border-radius: 3px;
+        border-top-left-;
+    }
+
+#rep {
+    display: flex;
 }
 
-h1, h2 {
-    text-align: center;
+#reponse {
+    width: 50%;
 }
 
-.general {
-    margin-top: 100px;
+span {
+    color: #E50F7C;
 }
 
-.left {
-    float: left;
-    width: 40%;
-    color: #FFFFFF;
+#repondre {
+    width: 50%;
 }
 
-.right {
-    float: right;
-    width: 40%;
-    color: #FFFFFF;
+#but {
+    background-color: #E50F7C;
+    border: none;
+    margin-top: 3%;
 }
 
 @media screen and (max-width: 768px) {
