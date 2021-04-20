@@ -1,6 +1,14 @@
 <?php
     include("../includes/head.php");
     include("../includes/administration-head.php");
+    // Récupération des données de la session
+	session_start();
+
+	// Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
+	if(!isset($_SESSION["pseudo"])){
+		header("Location: ../connexion/connexion.php");
+		exit(); 
+	}
 ?>
     <table class="table table-striped table-bordered">
         <thead>

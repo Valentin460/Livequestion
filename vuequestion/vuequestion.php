@@ -3,6 +3,14 @@
         require_once("../db/fonctions.php");
         $co = connexionBdd();
         include("../includes/connexion-head.php");
+        // Récupération des données de la session
+	    session_start();
+
+	    // Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
+	    if(!isset($_SESSION["pseudo"])){
+		    header("Location: ../connexion/connexion.php");
+		    exit(); 
+	    }
     ?>
         <section>
             <div id="quest" class="container">

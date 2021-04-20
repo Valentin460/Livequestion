@@ -1,12 +1,20 @@
 <?php
-        include("../includes/head.php");
-        require('../db/fonctions.php');
-        // Vérification des données saisies dans les champs du formulaire
-			require('../traitement/traitement_ajoutquestion.php');
-			if (!empty($_POST)) {
-				$traitement = traitementAjoutQuestion($_POST);
-			}
-    ?>
+    include("../includes/head.php");
+    require('../db/fonctions.php');
+    // Vérification des données saisies dans les champs du formulaire
+	require('../traitement/traitement_ajoutquestion.php');
+	if (!empty($_POST)) {
+	    $traitement = traitementAjoutQuestion($_POST);
+	}
+    // Récupération des données de la session
+	session_start();
+
+	// Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
+	if(!isset($_SESSION["pseudo"])){
+        header("Location: ../connexion/connexion.php");
+		exit(); 
+	}
+?>
         <div id="color">
             <div class="container">
                 <div id="inscription">
