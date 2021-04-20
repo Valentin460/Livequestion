@@ -2,6 +2,7 @@
         include("../includes/head.php");
         require_once("../db/fonctions.php");
         $co = connexionBdd();
+        include("../includes/connexion-head.php");
     ?>
         <section>
             <div id="quest" class="container">
