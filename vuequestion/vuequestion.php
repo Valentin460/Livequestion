@@ -49,14 +49,6 @@
                     <h4>Répondre à la question</h4>
                     <form method="post">
                         <div class="form-group">
-                            <label>Votre pseudo</label>
-                            <input type="text" name="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Lien web vers votre avatar</label>
-                            <input type="text" name="" class="form-control">
-                        </div>
-                        <div class="form-group">
                             <label>Votre réponse</label>
                             <textarea class="form-control"></textarea>
                         </div>
