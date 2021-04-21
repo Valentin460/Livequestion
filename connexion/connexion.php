@@ -8,13 +8,13 @@
 
 		if(isset($_POST['submit'])){
 
-				$pseudo = $_POST['pseudo'];
-				$mot_de_passe = hash('sha256', $_POST['password']);
+				$pseudo_utilisateur = $_POST['pseudo'];
+				$mot_de_passe_utilisateur = hash('sha256', $_POST['password']);
 
 				$query = $co->prepare('SELECT * FROM utilisateurs WHERE pseudo_utilisateur=:login and mot_de_passe_utilisateur=:pass');
 
-				$query->bindParam(':login', $pseudo);
-				$query->bindParam(':pass', $mot_de_passe);
+				$query->bindParam(':login', $pseudo_utilisateur);
+				$query->bindParam(':pass', $mot_de_passe_utilisateur);
 
 				$query->execute();
 
@@ -23,7 +23,7 @@
 				$rows = $query->rowCount();
 
 				if ($rows==1){
-					$_SESSION['pseudo'] = $pseudo;
+					$_SESSION['pseudo'] = $pseudo_utilisateur;
 
 					header("Location: ../vuemembre/vuemembre.php");
 				}else{

@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ajoutquestion",
+    "\\connexion",
+    "\\inscription",
+    "\\traitement",
+    "\\vuequestion"
   ],
+  "SelectedNode": "\\traitement\\traitement_ajoutquestion.php",
   "PreviewInSolutionExplorer": false
 }
