@@ -46,6 +46,10 @@ span {
     margin-top: 3%;
 }
 
+.warning {
+    color:red;
+}
+
 @media screen and (max-width: 768px) {
     .left {
         width: 100%;

@@ -34,12 +34,15 @@
                     
                     $co = connexionBdd();
 
-                    if(isset($_POST['submit'])){
+                    if(isset($_POST["submit"]) && !empty($_POST["reps"])){
 
-                        $profil = $co->query('SELECT pseudo_utilisateur, id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo_utilisateur'].'"');
+                        $profil = $co->query('SELECT id_utilisateur, pseudo_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+                        $profil->bindParam(':id_utilisateur', $id_utilisateur);
+                        $id_utilisateur = $profil->id_utilisateur;
 
 				        $query = $co->prepare('INSERT into reponses(id_utilisateur, question_reponse, date_reponse) VALUES(:id_utilisateur, :question_reponse, now())');
 
+                        $query->bindParam(':id_utilisateur', $id_utilisateur);
 				        $query->bindParam(':question_reponse', $reps);
 
                         $reps = $_POST['reps'];
@@ -55,6 +58,14 @@
                             <textarea class="form-control" name="reps" value="reps"></textarea>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary" id="but">Valider</button>
+                        <p class="warning">
+                            <?php
+                                if(isset($_POST["submit"]) && (empty($_POST["reps"])))
+                                    {
+                                        echo'Veuillez remplir tous les champs';
+                                    }
+                            ?>
+                        </p>
                     </form>
                 </div>
             </div>
