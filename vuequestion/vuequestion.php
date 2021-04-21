@@ -36,7 +36,7 @@
 
                     if(isset($_POST['submit'])){
 
-                        $profil = $co->query('SELECT pseudo_utilisateur, id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"')->fetchAll();
+                        $profil = $co->query('SELECT pseudo_utilisateur, id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo_utilisateur'].'"');
 
 				        $query = $co->prepare('INSERT into reponses(id_utilisateur, question_reponse, date_reponse) VALUES(:id_utilisateur, :question_reponse, now())');
 
