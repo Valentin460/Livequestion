@@ -12,13 +12,12 @@ function traitementInscription(array $informations){
 	$erreurs['email'] = "Veuillez saisir votre adresse email";
 	}
 
-	if ($_POST['password'] =! $_POST['verifyPassword']){
-	$erreurs['password'] = "Les mots de passe ne correspondent pas";
-	$erreurs['verifyPassword'] = "Les mots de passe ne correspondent pas";
+    if (strlen($informations['password']) < 8){
+	$erreurs['password'] = "Votre mot de passe doit contenir au moins 8 caractères";
 	}
 
-    if (strlen($informations['password']) < 8 AND htmlspecialchars($informations['password']) < 1){
-	$erreurs['password'] = "Votre mot de passe doit contenir au moins 8 caractères et au moins un caractère spécial";
+	if (empty($informations['verifyPassword'])){
+	$erreurs['verifyPassword'] = "Veuillez confirmer votre mot de passe";
 	}
 
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
