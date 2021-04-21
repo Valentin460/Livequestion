@@ -16,13 +16,14 @@ function traitementInscription(array $informations){
 	$erreurs['email'] = "Veuillez saisir votre adresse mail";
 	}
 
-    if (empty($informations['password'])){
-    $erreurs['password'] = "Veuillez saisir votre mot de passe";
-    }
+	if ($_POST['password'] =! $_POST['verifyPassword']){
+	$erreurs['password'] = "Les mots de passe ne correspondent pas";
+	$erreurs['verifyPassword'] = "Les mots de passe ne correspondent pas";
+	}
 
-    if (empty($informations['verifyPassword'])){
-    $erreurs['verifyPassword'] = "Veuillez confirmer votre mot de passe";
-    }
+    if (strlen($informations['password']) < 8 AND htmlspecialchars($informations['password']) < 1){
+	$erreurs['password'] = "Votre mot de passe doit contenir au moins 8 caractères et au moins un caractère spécial";
+	}
 
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
 
@@ -52,21 +53,21 @@ function traitementInscription(array $informations){
 				}
 				
 				// Récupération des valeurs du formulaire
-				$pseudo = $_POST['name'];
-                $email = $_POST['email'];
-				$genre = $_POST['genre'];
-				$mot_de_passe = hash('sha256', $_POST['password']);
+				$pseudo_utilisateur = $_POST['name'];
+                $email_utilisateur = $_POST['email'];
+				$genre_utilisateur = $_POST['genre'];
+				$mot_de_passe_utilisateur = hash('sha256', $_POST['password']);
 
 				// Connexion à la base de données
 				$co = connexionBdd();
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
-				$query = $co->prepare("INSERT into utilisateurs (pseudo, email, genre, mot_de_passe, date_inscription) VALUES (:pseudo, :email, :genre, :mot_de_passe, now())");
+				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, genre_utilisateur, mot_de_passe_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :genre_utilisateur, :mot_de_passe_utilisateur, now())");
 
-				$query->bindParam(':pseudo', $pseudo);
-                $query->bindParam(':email', $email);
-				$query->bindParam(':genre', $genre);
-				$query->bindParam(':mot_de_passe', $mot_de_passe);
+				$query->bindParam(':pseudo_utilisateur', $pseudo_utilisateur);
+                $query->bindParam(':email_utilisateur', $email_utilisateur);
+				$query->bindParam(':genre_utilisateur', $genre_utilisateur);
+				$query->bindParam(':mot_de_passe_utilisateur', $mot_de_passe_utilisateur);
 
 				// Exécution de la requête
 				$query->execute();

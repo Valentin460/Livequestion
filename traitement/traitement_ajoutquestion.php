@@ -46,9 +46,9 @@ function traitementAjoutQuestion(array $informations){
 				$co = connexionBdd();
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
-				$query = $co->prepare("INSERT into questions (titre, date_crea) VALUES (:titre, now())");
+				$query = $co->prepare("INSERT into questions (titre_question, date_creation_question) VALUES (:titre_question, now())");
 
-				$query->bindParam(':titre', $titre);
+				$query->bindParam(':titre_question', $titre);
 
 				// Exécution de la requête
 				$query->execute();

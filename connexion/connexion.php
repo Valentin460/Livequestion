@@ -11,7 +11,7 @@
 				$pseudo = $_POST['pseudo'];
 				$mot_de_passe = hash('sha256', $_POST['password']);
 
-				$query = $co->prepare('SELECT * FROM utilisateurs WHERE pseudo=:login and mot_de_passe=:pass');
+				$query = $co->prepare('SELECT * FROM utilisateurs WHERE pseudo_utilisateur=:login and mot_de_passe_utilisateur=:pass');
 
 				$query->bindParam(':login', $pseudo);
 				$query->bindParam(':pass', $mot_de_passe);

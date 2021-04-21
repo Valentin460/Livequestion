@@ -38,9 +38,9 @@
 
 				        $reps = $_POST['reps'];
 
-				        $query = $co->prepare('INSERT into reponses(rep_quest, date) VALUES(:rep_quest, now())');
+				        $query = $co->prepare('INSERT into reponses(question_reponse, date_reponse) VALUES(:question_reponse, now())');
 
-				        $query->bindParam(':rep_quest', $reps);
+				        $query->bindParam(':question_reponse', $reps);
 
 				        $query->execute();
 		        }
@@ -50,7 +50,7 @@
                     <form method="post">
                         <div class="form-group">
                             <label>Votre réponse</label>
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" name="reps" value="reps"></textarea>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary" id="but">Valider</button>
                     </form>

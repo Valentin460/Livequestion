@@ -35,10 +35,10 @@
                             <select class="form-control" name="catetogie" id="selectCat">
                                 <option value="categories" name="categories"></option>
                                 <?php
-							    $categories = connexionBdd()->query('SELECT nom FROM categories')->fetchAll();
+							    $categories = connexionBdd()->query('SELECT nom_categorie FROM categories')->fetchAll();
 
                                 for($i = 0; $i < count($categories); $i++){
-                                    echo '<option value="'.$categories[$i]['id'].'">'.$categories[$i]['nom'].'</option>';
+                                    echo '<option value="'.$categories[$i]['id_categorie'].'">'.$categories[$i]['nom_categorie'].'</option>';
                                 }
                                 ?>
                             </select>
