@@ -36,11 +36,13 @@
 
                     if(isset($_POST['submit'])){
 
-				        $reps = $_POST['reps'];
+                        $profil = $co->query('SELECT pseudo_utilisateur, id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo_utilisateur'].'"');
 
-				        $query = $co->prepare('INSERT into reponses(question_reponse, date_reponse) VALUES(:question_reponse, now())');
+				        $query = $co->prepare('INSERT into reponses(id_utilisateur, question_reponse, date_reponse) VALUES(:id_utilisateur, :question_reponse, now())');
 
 				        $query->bindParam(':question_reponse', $reps);
+
+                        $reps = $_POST['reps'];
 
 				        $query->execute();
 		        }
@@ -60,3 +62,4 @@
     <?php
         include("../includes/connexion-footer.php");
     ?>
+
