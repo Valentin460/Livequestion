@@ -1,0 +1,98 @@
+body {
+	background-color: #405063;
+	font-family: Roboto;
+}
+
+.card {
+	color: white;
+}
+
+	.card .content {
+		padding: 30px;
+		background-color: #405063;
+	}
+
+	.card.profile .indicator i {
+		color: #405063;
+		vertical-align: middle;
+		font-size: 4rem;
+		margin-right: 15px;
+	}
+
+	.card.profile .upload, .card.profile .download {
+		text-align: center;
+	}
+
+		.card.profile .upload i, .card.profile .upload .unit, .card.profile .download i, .card.profile .download .unit {
+			color: #6e7a88;
+		}
+
+		.card.profile .upload .value, .card.profile .download .value {
+			font-size: 3rem;
+			font-weight: 200;
+		}
+
+	.card.profile .mp {
+		text-align: right;
+	}
+
+		.card.profile .mp a.btn {
+			background-color: #202933;
+			color: #fff;
+			padding: 10px;
+		}
+
+			.card.profile .mp a.btn i {
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+
+	.card .card-footer {
+		padding: 30px;
+		background-color: #262f3b;
+		padding-left: 370px;
+	}
+
+		.card .card-footer i {
+			color: #6e7a88;
+		}
+
+.torrents {
+	margin-top: 30px;
+}
+
+	.torrents > div:nth-child(odd) {
+		background-color: #EB038A;
+	}
+
+	.torrents > div:nth-child(even) {
+		background-color: #262f3b;
+	}
+
+	.torrents .legend {
+		padding: 15px;
+	}
+
+	.torrents .torrent {
+		padding: 15px;
+	}
+
+		.torrents .torrent > .row {
+			display: flex;
+			align-items: center;
+		}
+
+		.torrents .torrent .title {
+			font-size: 1.5rem;
+			margin-left: 36px;
+		}
+
+		.torrents .torrent .category {
+			color: #6e7a88;
+			margin-left: 36px;
+		}
+
+	.torrents .legend .row {
+		margin-right: 20px;
+		margin-left: 20px;
+	}

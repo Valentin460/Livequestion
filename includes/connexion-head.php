@@ -12,7 +12,7 @@
                 <a class="nav-link" href="../ajoutquestion/ajoutquestion.php" role="button" aria-haspopup="true" aria-expanses="false">Poser une question</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../vuemembre/vuemembre.php" role="button" aria-haspopup="true" aria-expanses="false">Mon profil</a>
+                <a class="nav-link" href="../profil/profil.php" role="button" aria-haspopup="true" aria-expanses="false">Mon profil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../connexion/logout.php" role="button" aria-haspopup="true" aria-expanses="false">Déconnexion</a>
