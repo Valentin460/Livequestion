@@ -35,6 +35,7 @@
           echo '<p>'.$item['email_utilisateur'].'</p>';
           echo '<p>'.$item['genre_utilisateur'].'</p>';
           }
+          echo '<a class="btn btn-primary" href="update.php?id='.$item['id_utilisateur'].'"><span class="glyphicon glyphicon-pencil"></span> Modifier vos informations</a>';
           ?>
         </div>
     </div>
