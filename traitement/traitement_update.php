@@ -2,9 +2,9 @@
 
     require '../db/fonctions.php';
 
-    if(!empty($_GET['id_utilisateur'])) 
+    if(!empty($_GET['id'])) 
     {
-        $id = checkInput($_GET['id_utilisateur']);
+        $id = checkInput($_GET['id']);
     }
 
     $pseudo_utilisateurErreur = $email_utilisateurErreur = $mot_de_passe_utilisateurErreur = $pseudo_utilisateur = $email_utilisateur = $mot_de_passe_utilisateur = "";
@@ -19,17 +19,17 @@
        
         if(empty($pseudo_utilisateur)) 
         {
-            $pseudo_utilisateurErreur = 'Ce champ ne peut pas être vide';
+            $pseudo_utilisateurErreur = 'Veuillez saisir votre pseudo';
             $isSuccess = false;
         }
         if(empty($email_utilisateur)) 
         {
-            $email_utilisateurErreur = 'Ce champ ne peut pas être vide';
+            $email_utilisateurErreur = 'Veuillez saisir votre adresse email';
             $isSuccess = false;
         } 
         if(empty($mot_de_passe_utilisateur)) 
         {
-            $mot_de_passe_utilisateurErreur = 'Ce champ ne peut pas être vide';
+            $mot_de_passe_utilisateurErreur = 'Veuillez saisir votre mot de passe';
             $isSuccess = false;
         }
          
@@ -38,8 +38,8 @@
             $db = connexionBdd();
             if($isSuccess)
             {
-                $statement = $db->prepare("UPDATE utilisateurs set pseudo_utilisateur = ?, email_utilisateur = ?, mot_de_passe_utilisateur = ?, projet_periode_realisation = ?, projet_besoin_mission = ?, projet_documentation = ?, projet_bilan = ?, projet_images = ? WHERE projet_ID = ?");
-                $statement->execute(array($titre,$intitule,$heure,$realisation,$besoin,$documentation,$bilan,$image,$id));
+                $statement = $db->prepare("UPDATE utilisateurs set pseudo_utilisateur = ?, email_utilisateur = ?, mot_de_passe_utilisateur = ? WHERE id_utilisateur = ?");
+                $statement->execute(array($pseudo_utilisateur,$email_utilisateur,$mot_de_passe_utilisateur,$id));
             }
             header("Location: profil.php");
         }
@@ -47,17 +47,12 @@
     else 
     {
         $db = connexionBdd();
-        $statement = $db->prepare("SELECT * FROM projets where projet_ID = ?");
-        $statement->execute(array($id));
+        $statement = $db->prepare("SELECT * FROM utilisateurs where id_utilisateur = ?");
+        $statement->execute(array($id_utilisateur));
         $item = $statement->fetch();
-        $titre = $item['projet_titre'];
-        $intitule = $item['projet_intitule'];
-        $heure = $item['projet_charge_heure'];
-        $realisation = $item['projet_periode_realisation'];
-        $besoin = $item['projet_besoin_mission'];
-        $documentation = $item['projet_documentation'];
-        $bilan = $item['projet_bilan'];
-        $image = $item['projet_images'];
+        $pseudo_utilisateur = $item['pseudo_utilisateur'];
+        $email_utilisateur = $item['email_utilisateur'];
+        $mot_de_passe_utilisateur = $item['mot_de_passe_utilisateur'];
     }
 
     function checkInput($data) 
