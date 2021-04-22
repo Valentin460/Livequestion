@@ -12,7 +12,7 @@
 		exit(); 
 	}
 ?>
-        <form class="form" action="<?php echo 'update.php?id='.$id_utilisateur;?>" role="form" method="post" enctype="multipart/form-data">
+        <form class="form" action="<?php echo 'update.php?id='.$id;?>" role="form" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name">Nom d'utilisateur :
                     <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" value="<?php echo $pseudo_utilisateur;?>">
@@ -33,7 +33,7 @@
             </div>
             <div class="form-actions">
                 <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-                    <a class="btn btn-primary" href="profil.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                <a class="btn btn-primary" href="profil.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
             </div>
         </form>
 <?php

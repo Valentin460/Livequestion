@@ -13,8 +13,7 @@
     {
         $pseudo_utilisateur = checkInput($_POST['pseudo_utilisateur']);
         $email_utilisateur = checkInput($_POST['$email_utilisateur']);
-        $heure = checkInput($_POST['$mot_de_passe_utilisateur']);
-        $mot_de_passe_utilisateur = checkInput($_POST['realisation']);
+        $mot_de_passe_utilisateur = checkInput($_POST['$mot_de_passe_utilisateur']);
         $isSuccess = true;
        
         if(empty($pseudo_utilisateur)) 
@@ -48,7 +47,7 @@
     {
         $db = connexionBdd();
         $statement = $db->prepare("SELECT * FROM utilisateurs where id_utilisateur = ?");
-        $statement->execute(array($id_utilisateur));
+        $statement->execute(array($id));
         $item = $statement->fetch();
         $pseudo_utilisateur = $item['pseudo_utilisateur'];
         $email_utilisateur = $item['email_utilisateur'];
