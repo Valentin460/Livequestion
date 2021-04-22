@@ -13,7 +13,7 @@
     {
         $pseudo_utilisateur = checkInput($_POST['pseudo_utilisateur']);
         $email_utilisateur = checkInput($_POST['$email_utilisateur']);
-        $mot_de_passe_utilisateur = checkInput($_POST['$mot_de_passe_utilisateur']);
+        $mot_de_passe_utilisateur = checkInput(hash('sha256', $_POST['$mot_de_passe_utilisateur']));
         $isSuccess = true;
        
         if(empty($pseudo_utilisateur)) 
