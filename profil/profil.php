@@ -40,7 +40,7 @@
     </div>
     <?php
     $db = connexionBdd();
-    $statement = $db->query('SELECT COUNT(*) FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+    $statement = $db->query('SELECT COUNT(*) AS resulat_questions FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
     while($item = $statement->fetch()) 
     {
     ?>
@@ -48,19 +48,21 @@
       <div class="row">
         <div class="col-sm-4">
         <?php
-            echo '<div class="indicator"><i class="material-icons">insert_drive_file</i><span>'.$item['id_utilisateur'].'</span></div>';
+            echo '<h4>Questions</h4>';
+            echo '<div class="indicator"><i class="material-icons">insert_drive_file</i><span>'.$item['resulat_questions'].'</span></div>';
             }
         ?>
         </div>
         <?php
         $db = connexionBdd();
-        $statement = $db->query('SELECT COUNT(*) FROM reponses, utilisateurs WHERE reponses.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+        $statement = $db->query('SELECT COUNT(*) AS resulat_reponses FROM reponses, utilisateurs WHERE reponses.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
         while($item = $statement->fetch()) 
         {
         ?>
         <div class="col-sm-4">
         <?php
-            echo '<div class="indicator"><i class="material-icons">comment</i><span>'.$item['id_utilisateur'].'</span>';
+            echo '<h4>Réponses</h4>';
+            echo '<div class="indicator"><i class="material-icons">comment</i><span>'.$item['resulat_reponses'].'</span>';
             }
         ?>
           </div>
@@ -76,10 +78,10 @@
   echo '<div class="torrents">';
     echo '<div class="legend">';
       echo '<div class="row">';
-        echo '<div class="col-md-6">Questions</div>';
-        echo '<div class="col-md-2">Catégories</div>';
-        echo '<div class="col-md-2">Auteurs</div>';
-        echo '<div class="col-md-1">Dates</div>';
+        echo '<div class="col-md-6">Question</div>';
+        echo '<div class="col-md-2">Catégorie</div>';
+        echo '<div class="col-md-2">Auteur</div>';
+        echo '<div class="col-md-1">Date</div>';
       echo '</div>';
     echo '</div>';
     echo '<div class="torrent">';
