@@ -69,42 +69,34 @@
     </div>
   </div>
   <?php
-    $db = connexionBdd();
-    $statement = $db->query('SELECT * FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
-    while($item = $statement->fetch()) 
-    {
-    ?>
-  <div class="torrents">
-    <div class="legend">
-      <div class="row">
-        <div class="col-md-6">Questions</div>
-        <div class="col-md-2">Catégories</div>
-        <div class="col-md-2">Auteurs</div>
-        <div class="col-md-1">Dates</div>
-      </div>
-    </div>
-    <?php
-    echo '<div class="torrent">';
+        $db = connexionBdd();
+        $statement = $db->query('SELECT * FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+        while($item = $statement->fetch()) 
+        {
+  echo '<div class="torrents">';
+    echo '<div class="legend">';
       echo '<div class="row">';
-        echo '<div class="col-md-6">';
-          echo '<div class="title">'.$item['titre_question'].'</div>';
-            $db = connexionBdd();
-            $statement = $db->query('SELECT * FROM reponses, utilisateurs WHERE reponses.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
-            while($item = $statement->fetch()) 
-            {
-          echo '<div class="category">'.$item['question_reponse'].'</div>';
-          }
+        echo '<div class="col-md-6">Questions</div>';
+        echo '<div class="col-md-2">Catégories</div>';
+        echo '<div class="col-md-2">Auteurs</div>';
+        echo '<div class="col-md-1">Dates</div>';
+      echo '</div>';
+    echo '</div>';
+    echo '<div class="torrent">';
+        echo '<div class="row">';
+            echo '<div class="col-md-6">';
+        echo '<div class="title">'.$item['titre_question'].'</div>';
         echo '</div>';
-        }
-        ?>
-        <div class="col-md-2">Animal</div>
-        <div class="col-md-2">Perrine C</div>
-        <div class="col-md-1">
-          <div class="upload">19/04/2021</div>
-        </div>
-      </div>
-    </div>
-  </div>
+        echo '<div class="col-md-2">'.$item['categorie_id_question'].'</div>';
+        echo '<div class="col-md-2">'.$item['pseudo_utilisateur'].'</div>';
+        echo '<div class="col-md-1">';
+          echo '<div class="upload">'.$item['date_creation_question'].'</div>';
+        echo '</div>';
+     echo '</div>';
+  echo '</div>';
+echo '</div>';
+}
+?>
 </div>
 	<?php
         include("../includes/connexion-footer.php");
