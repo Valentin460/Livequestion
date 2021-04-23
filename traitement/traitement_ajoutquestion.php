@@ -39,15 +39,15 @@ function traitementAjoutQuestion(array $informations){
 					return $var;
 				}
 
-				$profil = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"')
+				// Connexion à la base de données
+				$co = connexionBdd();
+
+				$profil = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
 
 				$id = $profil->fetch();
 				
 				// Récupération des valeurs du formulaire
 				$titre = $_POST['titrequestion'];
-
-				// Connexion à la base de données
-				$co = connexionBdd();
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
 				$query = $co->prepare("INSERT into questions (titre_question, id_utilisateur, date_creation_question) VALUES (:titre_question, :id_utilisateur, now())");
