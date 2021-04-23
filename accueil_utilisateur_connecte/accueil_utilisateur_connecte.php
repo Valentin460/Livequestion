@@ -2,9 +2,9 @@
   include("../includes/connexion-head-home.php");
 
     // Récupération des données de la session
-    // session_start();
+    session_start();
 
-    // // Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
+    // Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
       if(!isset($_SESSION["pseudo"])){
         header("Location: ../connexion/connexion.php");
         exit(); 
