@@ -16,6 +16,10 @@
 				<?php
                     include("includes/menu.php");
                 ?>
+                <div class="container">
+  				    <div class="arrondi1"></div>
+  				    <div class="arrondi2"></div>
+  			    </div>
 				<div class="presentation">
 					<div class="texte-presentation">
 						<h2 class="titre-presentation">Lorem ipsum dolor sit amet.</h2>

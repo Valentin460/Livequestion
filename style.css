@@ -8,6 +8,7 @@
 
 .main {
 	background-color: #1a2d34;
+	height: 666px;
 }
 
 
@@ -123,6 +124,8 @@ i{
 	background-size: cover;
 	background-position: center;
 	float: right;
+	position: absolute;
+	margin-left: 425px;
 }
 
 .btn-cta {
@@ -263,8 +266,11 @@ i{
 	}
 
 	.image-presentation {
-		margin-top: 50px;
-		margin-left: 518px;
+		margin-top: 289px;
+		margin-left: 24px;
+		position: absolute;
+		width: 91%;
+		height: 438px;
 	}
 
 	.btn-cta {
@@ -299,7 +305,7 @@ i{
 
 	.btn-cta {
 		margin: 50px auto 0 auto;
-		width: 35%;
+		width: 21%;
 	}
 
 	.nav-item {
@@ -789,3 +795,62 @@ footer {
 
 
 
+.arrondi1 {
+	width: 800px;
+	height: 570px;
+	background: #ec008c;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 36px;
+	border-top-left-radius: 880px 876px;
+	border-top-right-radius: 566px 587px;
+	border-bottom-left-radius: 7px 74px;
+	border-bottom-right-radius: 900px 54px;
+	margin-left: 435.5px;
+	position: absolute;
+	top: 173px;
+}
+
+.arrondi2 {
+	width: 550px;
+	height: 393px;
+	background: #EC1C97;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 36px;
+	border-top-left-radius: 100px 100px;
+	border-top-right-radius: 566px 587px;
+	border-bottom-left-radius: 354px 255px;
+	border-bottom-right-radius: 1215px 1150px;
+	margin-left: 630px;
+	position: absolute;
+	top: 235px;
+	transform: rotate(359deg);
+}
+
+@media only screen and (max-width: 992px) {
+	.arrondi1 {
+		width: 595px;
+		height: 531px;
+		margin-left: 240px;
+		top: 444px;
+
+	}
+
+	.main {
+		height: 898px;
+	}
+
+	.arrondi2 {
+		width: 450px;
+		height: 400px;
+		margin-left: 43%;
+		border-top-left-radius: 100px 100px;
+		border-top-right-radius: 566px 587px;
+		border-bottom-left-radius: 354px 255px;
+		border-bottom-right-radius: 1215px 1150px;
+		top: 428px;
+	}
+}
