@@ -1,5 +1,6 @@
 <?php
     include("../includes/head.php");
+	include("../includes/connexion-head.php");
     require('../db/fonctions.php');
     // Vérification des données saisies dans les champs du formulaire
 	require('../traitement/traitement_ajoutquestion.php');

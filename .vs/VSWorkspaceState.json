@@ -3,10 +3,14 @@
     "",
     "\\ajoutquestion",
     "\\connexion",
+    "\\db",
+    "\\includes",
     "\\inscription",
+    "\\profil",
     "\\traitement",
+    "\\vuemembre",
     "\\vuequestion"
   ],
-  "SelectedNode": "\\vuequestion\\vuequestion.php",
+  "SelectedNode": "\\connexion\\connexion.php",
   "PreviewInSolutionExplorer": false
 }
