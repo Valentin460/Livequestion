@@ -36,19 +36,21 @@
 
                     if(isset($_POST["submit"]) && !empty($_POST["reps"])){
 
-                        $profil = $co->query('SELECT id_utilisateur, pseudo_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
-                        $id_utilisateur = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+                        $profil = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
 
-				        $query = $co->prepare('INSERT into reponses(id_utilisateur, question_reponse, date_reponse) VALUES(id_utilisateur, :question_reponse, now())');
+                        $id = $profil->fetch();
+
+				        $query = $co->prepare('INSERT into reponses(id_utilisateur, question_reponse, date_reponse) VALUES(:id_utilisateur, :question_reponse, now())');
 
 				        $query->bindParam(':question_reponse', $reps);
+                        $query->bindParam(':id_utilisateur', $id['id_utilisateur']);
 
                         $reps = $_POST['reps'];
 
 				        $query->execute();
 		        }
                 ?>
-                <div id="repondre">
+                <<div id="repondre">
                     <h4>Répondre à la question</h4>
                     <form method="post">
                         <div class="form-group">
@@ -66,6 +68,33 @@
                         </p>
                     </form>
                 </div>
+            </div>
+            <h4><span>
+            <?php
+
+            $nbrep = $co->query('SELECT COUNT(question_reponse) AS nbrep FROM reponses');
+            $nbreps = $nbrep->fetch();
+            echo $nbreps['nbrep'];
+
+            ?></span> Réponse</h4>
+            <div class="container">
+            <?php
+                        $reponse = $co->query("SELECT * FROM reponses");
+					    while ($donnees = $reponse->fetch()){
+					    ?>
+                        
+                <div id="reponse">
+                    <div>
+                        <h6>Pseudo</h6>
+                        <p><?php echo $donnees['question_reponse']; ?></p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                            <?php
+					        }
+
+		        ?>
             </div>
         </section>
     <?php
