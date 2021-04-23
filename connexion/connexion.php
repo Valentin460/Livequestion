@@ -25,7 +25,7 @@
 				if ($rows==1){
 					$_SESSION['pseudo'] = $pseudo_utilisateur;
 
-					header("Location: ../profil/profil.php");
+					header("Location: ../accueil_utilisateur_connecte/accueil_utilisateur_connecte.php");
 				}else{
 					$message = " Le nom d'utilisateur ou le mot de passe est incorrect";
 				}
