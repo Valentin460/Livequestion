@@ -5,10 +5,10 @@
     // session_start();
 
     // // Vérifie si l'utilisateur est connecté, sinon redirection vers la page de connexion
-    // if(!isset($_SESSION["pseudo"])){
-    //     header("Location: ../connexion/connexion.php");
-    //     exit(); 
-    // }
+      if(!isset($_SESSION["pseudo"])){
+        header("Location: ../connexion/connexion.php");
+        exit(); 
+      }
 ?>
 ?>
 <!-- partial:index.partial.html -->
@@ -61,7 +61,7 @@
               echo '<input type="checkbox" id="chk1">';
               echo '<label for="chk1" class="toggle"></label>';
             echo '</div>';
-            echo '<a href="../vuemembre/vuemembre.php"><p class="title">' . $item['id_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
+            echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['id_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
           echo '</div>';
           echo '<div class="col col-2">';
             echo '<a href="../vuequestion/vuequestion.php"><div class="subject">' . $item['titre_question']. '</span></div></a>';
