@@ -4,9 +4,6 @@
     require('../db/fonctions.php');
     // Vérification des données saisies dans les champs du formulaire
 	require('../traitement/traitement_ajoutquestion.php');
-	if (!empty($_POST)) {
-	    $traitement = traitementAjoutQuestion($_POST);
-	}
     // Récupération des données de la session
 	session_start();
 
@@ -46,6 +43,11 @@
 						</p>
                         <button type="submit" name="submit" class="btn btn-primary" id="but">Ajouter la question</button>
                     </form>
+                    <?php
+                        if (!empty($_POST)) {
+	                        $traitement = traitementAjoutQuestion($_POST);
+	                    }
+                    ?>
                 </div>
             </div>
         </div>
