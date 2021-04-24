@@ -5,12 +5,16 @@ function traitementAjoutQuestion(array $informations){
 	$erreurs = [];
 
 	if (empty($informations['titrequestion'])){
-	$erreurs['titrequestion'] = "Veuillez saisir votre question";
+		$erreurs['titrequestion'] = "Veuillez saisir votre question";
 	}
 
 	if (strlen($informations['titrequestion']) > 255){
-	$erreurs['titrequestion'] = "Votre question ne peut pas dépasser 255 caractères";
-	} 
+		$erreurs['titrequestion'] = "Votre question ne peut pas dépasser 255 caractères";
+	}
+
+	if (empty($informations['categories'])){
+		$erreurs['categories'] = "Veuillez séléectionner une catégorie";
+	}
 
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
 
@@ -44,16 +48,21 @@ function traitementAjoutQuestion(array $informations){
 
 				$profil = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
 
+				$categorie = $co->query('SELECT id_categorie FROM categories');
+
 				$id = $profil->fetch();
+
+				$id = $categorie->fetch();
 				
 				// Récupération des valeurs du formulaire
 				$titre = $_POST['titrequestion'];
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
-				$query = $co->prepare("INSERT into questions (titre_question, id_utilisateur, date_creation_question) VALUES (:titre_question, :id_utilisateur, now())");
+				$query = $co->prepare("INSERT into questions (titre_question, categorie_id_question, id_utilisateur, date_creation_question) VALUES (:titre_question, :categorie_id_question, :id_utilisateur, now())");
 
 				$query->bindParam(':titre_question', $titre);
 				$query->bindParam(':id_utilisateur', $id['id_utilisateur']);
+				$query->bindParam(':id_categorie', $id['id_categorie']);
 
 				// Exécution de la requête
 				$query->execute();

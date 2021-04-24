@@ -12,6 +12,10 @@
         header("Location: ../connexion/connexion.php");
 		exit(); 
 	}
+
+    if (!empty($_POST)) {
+	    $traitement = traitementAjoutQuestion($_POST);
+	}
 ?>
         <div id="color">
             <div class="container">
@@ -43,11 +47,7 @@
 						</p>
                         <button type="submit" name="submit" class="btn btn-primary" id="but">Ajouter la question</button>
                     </form>
-                    <?php
-                        if (!empty($_POST)) {
-	                        $traitement = traitementAjoutQuestion($_POST);
-	                    }
-                    ?>
+                    
                 </div>
             </div>
         </div>
