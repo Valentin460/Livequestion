@@ -48,7 +48,10 @@ function traitementAjoutQuestion(array $informations){
 				
 				// Récupération des valeurs du formulaire
 				$titre = $_POST['titrequestion'];
-				$categorie = $_POST['categories'];
+				$categorie = $_POST['categorie'];
+
+				echo $categorie;
+                var_Dump($categorie);
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
 				$query = $co->prepare("INSERT into questions (titre_question, id_categorie, id_utilisateur, date_creation_question) VALUES (:titre_question, :id_categorie, :id_utilisateur, now())");

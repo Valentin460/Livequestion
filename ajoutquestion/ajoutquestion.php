@@ -38,7 +38,8 @@
                                 <option value="categories" name="categories"></option>
                                 <?php
 							    $categories = connexionBdd()->query('SELECT nom_categorie FROM categories')->fetchAll();
-
+                                echo $categories;
+                                var_Dump($categories);
                                 for($i = 0; $i < count($categories); $i++){
                                     echo '<option value="'.$categories[$i]['id_categorie'].'">'.$categories[$i]['nom_categorie'].'</option>';
                                 }
