@@ -90,7 +90,7 @@
             echo '<div class="col-md-6">';
         echo '<div class="title">'.$item['titre_question'].'</div>';
         echo '</div>';
-        echo '<div class="col-md-2">'.$item['categorie_id_question'].'</div>';
+        echo '<div class="col-md-2">'.$item['id_categorie'].'</div>';
         echo '<div class="col-md-2">'.$item['pseudo_utilisateur'].'</div>';
         echo '<div class="col-md-1">';
           echo '<div class="upload">'.$item['date_creation_question'].'</div>';

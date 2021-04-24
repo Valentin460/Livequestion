@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label for="categorie" id="cat">Catégorie</label>
-                            <select class="form-control" name="catetogie" id="selectCat">
+                            <select class="form-control" name="categorie" id="selectCat">
                                 <option value="categories" name="categories"></option>
                                 <?php
 							    $categories = connexionBdd()->query('SELECT nom_categorie FROM categories')->fetchAll();

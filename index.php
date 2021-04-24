@@ -168,64 +168,84 @@
             </div>
         </section>
         <!--Partie 6(FAQ) du site -->
-        <section id="faq">
-            <p>FAQ</p>
-            <h6>Sed ut perspiciatis unde omnis iste natus error sit volupattem </h6>
-            <h6>accusantium doloremque lauudantium, totam rem aperiam, eaque ipsa.</h6>
-            <div class="more">
-                <div class="container">
-                    <div class="dark-divider"></div>
-                    <div>
-                        <button class="button1" target="_blank">Can I upgrade later on? <i class="fas fa-caret-right"></i></button>
-                        <br>
-                        <div class="cadre">
-                            <p class="ab">Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre. Vivamus ornare phareta diam sit amet tincidunt. Eunuch sit amet phareta odio. Vivamus in tempor ipsum, si amet elementum neque. Sed faucibus posuere phareta. In imperdied eleifend dui a aliquet. Aliquam imperdiet Tyrion purus vitae rutrum. Donec eu commodo nunc. Mauris dignissim lectus massa, eget cursus quam mollis id. Eddart sit amet ex Jon nibh maximus cursus at vitae mi. Duis tincidunt aliquam mi sed sagittis.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <button class="button2" target="_blank">Can I port my data? <i class="fas fa-caret-right"></i></button>
-                        <br>
-                        <div class="cadre">
-                            <p class="bc">Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre. Vivamus ornare phareta diam sit amet tincidunt. Eunuch sit amet phareta odio. Vivamus in tempor ipsum, si amet elementum neque. Sed faucibus posuere phareta. In imperdied eleifend dui a aliquet. Aliquam imperdiet Tyrion purus vitae rutrum. Donec eu commodo nunc. Mauris dignissim lectus massa, eget cursus quam mollis id. Eddart sit amet ex Jon nibh maximus cursus at vitae mi. Duis tincidunt aliquam mi sed sagittis.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <button class="button3" target="_blank">Are my food photos stored forever in the cloud? <i class="fas fa-caret-right"></i></button>
-                        <br>
-                        <div class="cadre">
-                            <p class="cd">Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre. Vivamus ornare phareta diam sit amet tincidunt. Eunuch sit amet phareta odio. Vivamus in tempor ipsum, si amet elementum neque. Sed faucibus posuere phareta. In imperdied eleifend dui a aliquet. Aliquam imperdiet Tyrion purus vitae rutrum. Donec eu commodo nunc. Mauris dignissim lectus massa, eget cursus quam mollis id. Eddart sit amet ex Jon nibh maximus cursus at vitae mi. Duis tincidunt aliquam mi sed sagittis.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <button class="button4" target="_blank">Who foots the bill for that? <i class="fas fa-caret-right"></i></button>
-                        <br>
-                        <div class="cadre">
-                            <p class="de">Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre. Vivamus ornare phareta diam sit amet tincidunt. Eunuch sit amet phareta odio. Vivamus in tempor ipsum, si amet elementum neque. Sed faucibus posuere phareta. In imperdied eleifend dui a aliquet. Aliquam imperdiet Tyrion purus vitae rutrum. Donec eu commodo nunc. Mauris dignissim lectus massa, eget cursus quam mollis id. Eddart sit amet ex Jon nibh maximus cursus at vitae mi. Duis tincidunt aliquam mi sed sagittis.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <button class="button5" target="_blank">What's the real cost? <i class="fas fa-caret-right"></i></button>
-                        <br>
-                        <div class="cadre">
-                            <p class="ef">Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre. Vivamus ornare phareta diam sit amet tincidunt. Eunuch sit amet phareta odio. Vivamus in tempor ipsum, si amet elementum neque. Sed faucibus posuere phareta. In imperdied eleifend dui a aliquet. Aliquam imperdiet Tyrion purus vitae rutrum. Donec eu commodo nunc. Mauris dignissim lectus massa, eget cursus quam mollis id. Eddart sit amet ex Jon nibh maximus cursus at vitae mi. Duis tincidunt aliquam mi sed sagittis.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <button class="button6" target="_blank">Can my company request a custom plan? <i class="fas fa-caret-right"></i></button>
-                        <br>
-                        <div class="cadre">
-                            <p class="fg">Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre. Vivamus ornare phareta diam sit amet tincidunt. Eunuch sit amet phareta odio. Vivamus in tempor ipsum, si amet elementum neque. Sed faucibus posuere phareta. In imperdied eleifend dui a aliquet. Aliquam imperdiet Tyrion purus vitae rutrum. Donec eu commodo nunc. Mauris dignissim lectus massa, eget cursus quam mollis id. Eddart sit amet ex Jon nibh maximus cursus at vitae mi. Duis tincidunt aliquam mi sed sagittis.</p>
-                        </div>
-                    </div>
-                </div>
-                <h6 class="questions">Still have unanswered questions ?<a href="vuequestion.php"> Get in touch.</a></h6>
+        <div class="tout_faq">
+			<h2>FAQ</h2>
+			<p class="phrases_haut_faq">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div class="questions_faq">
+				<a class="bouton_faq" id="bouton_faq" data-toggle="collapse" href="#reponse_faq0" role="button" aria-expanded="false" aria-controls="reponse_faq0">
+				    <div class="question_faq">
+					    <p class="titre_question_faq">Can I upgrade later on ?</p>
+							<div class="fleche_droite_faq">
+							    <svg class="svg-inline--fa fa-caret-right fa-w-6 icone_fleche_droite_faq" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" data-fa-i2svg=""><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><!-- <i class="fas fa-caret-right icone_fleche_droite_faq"></i> -->
+							</div>
+					</div>
+				</a>
+				<div class="reponse_faq collapse" id="reponse_faq0">
+					<p>lorem ipsum dolor sit amet</p>
+				</div>
+                <a class="bouton_faq" id="bouton_faq" data-toggle="collapse" href="#reponse_faq1" role="button" aria-expanded="false" aria-controls="reponse_faq1">
+				    <div class="question_faq">
+					    <p class="titre_question_faq">Can I port my data from another provider ?</p>
+						    <div class="fleche_droite_faq">
+							    <svg class="svg-inline--fa fa-caret-right fa-w-6 icone_fleche_droite_faq" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" data-fa-i2svg=""><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><!-- <i class="fas fa-caret-right icone_fleche_droite_faq"></i> -->
+						    </div>
+				    </div>
+				</a>
+				<div class="reponse_faq collapse" id="reponse_faq1">
+					<p>lorem ipsum dolor sit amet</p>
+				</div>
+                <a class="bouton_faq" id="bouton_faq" data-toggle="collapse" href="#reponse_faq2" role="button" aria-expanded="false" aria-controls="reponse_faq2">
+				    <div class="question_faq">
+					    <p class="titre_question_faq">Are my food photos stored forever in the cloud ?</p>
+						    <div class="fleche_droite_faq">
+							    <svg class="svg-inline--fa fa-caret-right fa-w-6 icone_fleche_droite_faq" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" data-fa-i2svg=""><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><!-- <i class="fas fa-caret-right icone_fleche_droite_faq"></i> -->
+						    </div>
+				    </div>
+			    </a>
+				<div class="reponse_faq collapse" id="reponse_faq2">
+				    <p>lorem ipsum dolor sit amet</p>
+				</div>
+                <a class="bouton_faq" id="bouton_faq" data-toggle="collapse" href="#reponse_faq3" role="button" aria-expanded="false" aria-controls="reponse_faq3">
+					<div class="question_faq">
+						<p class="titre_question_faq">Who foots the bill for that ?</p>
+							<div class="fleche_droite_faq">
+								<svg class="svg-inline--fa fa-caret-right fa-w-6 icone_fleche_droite_faq" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" data-fa-i2svg=""><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><!-- <i class="fas fa-caret-right icone_fleche_droite_faq"></i> -->
+					        </div>
+				    </div>
+				</a>
+				<div class="reponse_faq collapse" id="reponse_faq3">
+					<p>lorem ipsum dolor sit amet</p>
+				</div>
+                <a class="bouton_faq" id="bouton_faq" data-toggle="collapse" href="#reponse_faq4" role="button" aria-expanded="false" aria-controls="reponse_faq4">
+					<div class="question_faq">
+						<p class="titre_question_faq">What's the real cost ?</p>
+							<div class="fleche_droite_faq">
+								<svg class="svg-inline--fa fa-caret-right fa-w-6 icone_fleche_droite_faq" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" data-fa-i2svg=""><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><!-- <i class="fas fa-caret-right icone_fleche_droite_faq"></i> -->
+							</div>
+					</div>
+				</a>
+				<div class="reponse_faq collapse" id="reponse_faq4">
+					<p>lorem ipsum dolor sit amet</p>
+				</div>
+                <a class="bouton_faq" id="bouton_faq" data-toggle="collapse" href="#reponse_faq5" role="button" aria-expanded="false" aria-controls="reponse_faq5">
+					<div class="question_faq">
+						<p class="titre_question_faq">Can my company request a custom plan ?</p>
+							<div class="fleche_droite_faq">
+								<svg class="svg-inline--fa fa-caret-right fa-w-6 icone_fleche_droite_faq" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" data-fa-i2svg=""><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><!-- <i class="fas fa-caret-right icone_fleche_droite_faq"></i> -->
+							</div>
+						</div>
+				</a>
+				<div class="reponse_faq collapse" id="reponse_faq5">
+					<p>lorem ipsum dolor sit amet</p>
+				</div>			
             </div>
-        </section>
+			<p class="phrase_bas_faq">Still have unanswered questions? <a href="#" class="get_in_touch_faq"> Get in touch</a></p>
+		</div>
         <?php
             include("includes/footer.php");
         ?>
