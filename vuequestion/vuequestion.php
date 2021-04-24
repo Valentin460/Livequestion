@@ -78,7 +78,14 @@
                         
                 <div id="reponse">
                     <div>
-                        <h6>Pseudo</h6>
+                        <h6><?php 
+                        
+                        $pseudos_rep = $co->query('SELECT pseudo_utilisateur FROM utilisateurs, reponses WHERE utilisateurs.id_utilisateur = reponses.id_utilisateur');
+                        $pseudo_reps = $pseudos_rep->fetch();
+                        echo $pseudo_reps['pseudo_utilisateur'];
+
+                        ?>
+                        </h6>
                         <p><?php echo $donnees['question_reponse']; ?></p>
                     </div>
                     <br>
