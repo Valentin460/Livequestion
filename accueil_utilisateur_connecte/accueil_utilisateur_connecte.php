@@ -10,7 +10,6 @@
         exit(); 
       }
 ?>
-?>
 <!-- partial:index.partial.html -->
 <aside id="sidebar" class="nano">
   <div class="nano-content">
@@ -48,9 +47,9 @@
       <li><a class="icon circle-icon red glyphicon glyphicon-flag"></a></li>
     </ul>
   </div>
-  <div id="main-nano-wrapper" class="nano">';
-    <div class="nano-content">';
-        <ul class="message-list">';
+  <div id="main-nano-wrapper" class="nano">
+    <div class="nano-content">
+        <ul class="message-list">
       <?php
         $statement = $co->query('SELECT * FROM questions ORDER BY date_creation_question ASC');
         while($item = $statement->fetch())
