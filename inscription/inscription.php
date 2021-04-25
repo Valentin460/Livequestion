@@ -14,7 +14,7 @@
 				<form id="formulaire" method="post" action="">
 					<div class="form-group">
 						<input type="text" name="name" class="form-control" placeholder="Pseudo" id="name">
-						<p><?php
+						<p class="warning"><?php
 							if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['name'])){
 								echo $traitement['erreurs']['name'];
 							}
@@ -23,7 +23,7 @@
 					</div>
 					<div class="form-group">
 						<input type="email" name="email" class="form-control" placeholder="E-mail" id="mail">
-						<p><?php
+						<p class="warning"><?php
 							if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['email'])){
 								echo $traitement['erreurs']['email'];
 							}
@@ -45,7 +45,7 @@
 								<p>1 chiffre</p>
 								<p>1 Majuscule</p>
 							</div>
-							<p><?php
+							<p class="warning"><?php
 									if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['password'])){
 										echo $traitement['erreurs']['password'];
 									}
@@ -54,7 +54,7 @@
 						</div>
 						<div class="form-group col-lg-6">
 							<input type="password" name="verifyPassword" id="verifyMdp" class="form-control" placeholder="Vérification mot de passe">
-							<p><?php
+							<p class="warning"><?php
 								if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['verifyPassword'])){
 									echo $traitement['erreurs']['verifyPassword'];
 								}

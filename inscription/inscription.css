@@ -102,3 +102,7 @@ h5 a:hover {
 	color:#929292;
 	text-decoration:underline;
 }
+
+.warning {
+	color: red;
+}

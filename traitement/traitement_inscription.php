@@ -13,7 +13,7 @@ function traitementInscription(array $informations){
 	}
 
     if (strlen($informations['password']) < 8){
-	$erreurs['password'] = "Votre mot de passe doit contenir au moins 8 caractères";
+	$erreurs['password'] = "Votre mot de passe doit contenir au moins 8 caracteres";
 	}
 
 	if (empty($informations['verifyPassword'])){
@@ -70,7 +70,7 @@ function traitementInscription(array $informations){
 				// Message de confirmation après l'envoie des informations en base de données
 				if($query){
 					echo "<div>
-							<center><h3>Votre inscription a bien été prise en compte !</h3></center>
+							<center><h3>Votre inscription a bien ete prise en compte !</h3></center>
 						</div>";
 				}
 			}
