@@ -50,7 +50,7 @@ body {
 	.card .card-footer {
 		padding: 30px;
 		background-color: #262f3b;
-		padding-left: 370px;
+		padding-left: 30%;
 	}
 
 		.card .card-footer i {
@@ -78,7 +78,6 @@ body {
 	}
 
 		.torrents .torrent > .row {
-			display: flex;
 			align-items: center;
 		}
 
@@ -86,13 +85,3 @@ body {
 			font-size: 1.5rem;
 			margin-left: 36px;
 		}
-
-		.torrents .torrent .category {
-			color: #6e7a88;
-			margin-left: 36px;
-		}
-
-	.torrents .legend .row {
-		margin-right: 20px;
-		margin-left: 20px;
-	}

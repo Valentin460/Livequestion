@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="connexion.css"/>
+	<link rel="stylesheet" type="text/css" href="connexion-head.css"/>
 	<link rel="stylesheet" type="text/css" href="inscription.css"/>
 	<link rel="stylesheet" type="text/css" href="vuemembre.css"/>
 	<link rel="stylesheet" type="text/css" href="profil.css"/>

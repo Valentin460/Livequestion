@@ -47,7 +47,7 @@
     ?>
     <div class="card-footer">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-5 col-xs-12">
         <?php
             echo '<h4>Questions</h4>';
             echo '<div class="indicator"><i class="material-icons">insert_drive_file</i><span>'.$item['resulat_questions'].'</span></div>';
@@ -60,7 +60,7 @@
         while($item = $statement->fetch()) 
         {
         ?>
-        <div class="col-sm-4">
+        <div class="col-sm-5 col-xs-12">
         <?php
             echo '<h4>Réponses</h4>';
             echo '<div class="indicator"><i class="material-icons">comment</i><span>'.$item['resulat_reponses'].'</span>';
@@ -79,20 +79,20 @@
   echo '<div class="torrents">';
     echo '<div class="legend">';
       echo '<div class="row">';
-        echo '<div class="col-md-6">Question</div>';
-        echo '<div class="col-md-2">Catégorie</div>';
-        echo '<div class="col-md-2">Auteur</div>';
-        echo '<div class="col-md-1">Date</div>';
+        echo '<div class="col-md-6 col-xs-4">Question</div>';
+        echo '<div class="col-md-2 col-xs-3">Catégorie</div>';
+        echo '<div class="col-md-2 col-xs-3">Auteur</div>';
+        echo '<div class="col-md-2 col-xs-2">Date</div>';
       echo '</div>';
     echo '</div>';
     echo '<div class="torrent">';
         echo '<div class="row">';
-            echo '<div class="col-md-6">';
+            echo '<div class="col-md-6 col-xs-4">';
         echo '<div class="title">'.$item['titre_question'].'</div>';
         echo '</div>';
-        echo '<div class="col-md-2">'.$item['id_categorie'].'</div>';
-        echo '<div class="col-md-2">'.$item['pseudo_utilisateur'].'</div>';
-        echo '<div class="col-md-1">';
+        echo '<div class="col-md-2 col-xs-3">'.$item['id_categorie'].'</div>';
+        echo '<div class="col-md-2 col-xs-3">'.$item['pseudo_utilisateur'].'</div>';
+        echo '<div class="col-md-2 col-xs-2">';
           echo '<div class="upload">'.$item['date_creation_question'].'</div>';
         echo '</div>';
      echo '</div>';
