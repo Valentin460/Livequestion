@@ -384,7 +384,7 @@ a:hover {
 #main .message-list li {
   position: relative;
   display: block;
-  height: 50px;
+  height: 100px;
   line-height: 50px;
   cursor: default;
   transition-duration: 0.3s;

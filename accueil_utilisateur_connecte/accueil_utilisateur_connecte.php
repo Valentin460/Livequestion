@@ -48,28 +48,31 @@
       <li><a class="icon circle-icon red glyphicon glyphicon-flag"></a></li>
     </ul>
   </div>
-  <?php
-    $statement = $co->query('SELECT * FROM questions ORDER BY date_creation_question ASC');
-    while($item = $statement->fetch())
-    {
-      echo '<div id="main-nano-wrapper" class="nano">';
-      echo '<div class="nano-content">';
-      echo '<ul class="message-list">';
-        echo '<li class="unread">';
-          echo '<div class="col col-1"><span class="dot"></span>';
-            echo '<div class="checkbox-wrapper">';
-              echo '<input type="checkbox" id="chk1">';
-              echo '<label for="chk1" class="toggle"></label>';
-            echo '</div>';
-            echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['id_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
-          echo '</div>';
-          echo '<div class="col col-2">';
-            echo '<a href="../vuequestion/vuequestion.php"><div class="subject">' . $item['titre_question']. '</span></div></a>';
-            echo '<div class="date">' . $item['date_creation_question'] . '</div>';
-          echo '</div>';
-        echo '</li>';
-    }
-    ?>
+  <div id="main-nano-wrapper" class="nano">';
+    <div class="nano-content">';
+        <ul class="message-list">';
+      <?php
+        $statement = $co->query('SELECT * FROM questions ORDER BY date_creation_question ASC');
+        while($item = $statement->fetch())
+        {
+            echo '<li class="unread">';
+              echo '<div class="col col-1"><span class="dot"></span>';
+                echo '<div class="checkbox-wrapper">';
+                  echo '<input type="checkbox" id="chk1">';
+                  echo '<label for="chk1" class="toggle"></label>';
+                echo '</div>';
+                echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['id_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
+              echo '</div>';
+              echo '<div class="col col-2">';
+                echo '<a href="../vuequestion/vuequestion.php"><div class="subject">' . $item['titre_question']. '</span></div></a>';
+                echo '<div class="date">' . $item['date_creation_question'] . '</div>';
+              echo '</div>';
+            echo '</li>';
+        }
+        ?>
+        </ul>
+    </div>
+  </div>
 </main>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
