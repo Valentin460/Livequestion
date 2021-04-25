@@ -37,7 +37,7 @@
                             <select class="form-control" name="categorie" id="selectCat">
                                 <option value="categories" name="categories"></option>
                                 <?php
-							    $categories = connexionBdd()->query('SELECT nom_categorie FROM categories')->fetchAll();
+							    $categories = connexionBdd()->query('SELECT * FROM categories')->fetchAll();
                                 echo $categories;
                                 var_Dump($categories);
                                 for($i = 0; $i < count($categories); $i++){

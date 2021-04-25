@@ -9,7 +9,7 @@ function traitementAjoutQuestion(array $informations){
 	}
 
 	if (strlen($informations['titrequestion']) > 255){
-		$erreurs['titrequestion'] = "Votre question ne peut pas dépasser 255 caractères";
+		$erreurs['titrequestion'] = "Votre question ne peut pas dépasser 255 caracteres";
 	}
 
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
@@ -50,14 +50,11 @@ function traitementAjoutQuestion(array $informations){
 				$titre = $_POST['titrequestion'];
 				$categorie = $_POST['categorie'];
 
-				echo $categorie;
-                var_Dump($categorie);
-
 				// Prépation de la requête afin d'inserer les valeurs en base de données
 				$query = $co->prepare("INSERT into questions (titre_question, id_categorie, id_utilisateur, date_creation_question) VALUES (:titre_question, :id_categorie, :id_utilisateur, now())");
 
 				$query->bindParam(':titre_question', $titre);
-				$query->bindParam(':id_categorie', $id_categorie);
+				$query->bindParam(':id_categorie', $categorie);
 				$query->bindParam(':id_utilisateur', $id['id_utilisateur']);
 
 				// Exécution de la requête
@@ -66,7 +63,7 @@ function traitementAjoutQuestion(array $informations){
 				// Message de confirmation après l'envoie des informations en base de données
 				if($query){
 					echo "<div>
-							<center><h3>Votre question a bien été enregistrée !</h3></center>
+							<center><h3>Votre question a bien ete enregistree !</h3></center>
 						</div>";
 				}
 			}

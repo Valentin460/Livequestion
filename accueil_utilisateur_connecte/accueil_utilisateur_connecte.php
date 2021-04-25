@@ -51,7 +51,7 @@
     <div class="nano-content">
         <ul class="message-list">
       <?php
-        $statement = $co->query('SELECT * FROM questions ORDER BY date_creation_question ASC');
+        $statement = $co->query('SELECT * FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur ORDER BY date_creation_question ASC');
         while($item = $statement->fetch())
         {
             echo '<li class="unread">';
@@ -60,7 +60,7 @@
                   echo '<input type="checkbox" id="chk1">';
                   echo '<label for="chk1" class="toggle"></label>';
                 echo '</div>';
-                echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['id_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
+                echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['pseudo_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
               echo '</div>';
               echo '<div class="col col-2">';
                 echo '<a href="../vuequestion/vuequestion.php"><div class="subject">' . $item['titre_question']. '</span></div></a>';

@@ -388,49 +388,6 @@ a:hover {
   line-height: 50px;
   cursor: default;
   transition-duration: 0.3s;
-  /*
-			.col-1 {
-				width: 140px;
-				text-align: right;
-				padding-right: 37px;
-				padding-top: 15px;
-
-				.checkbox-wrapper, .icon, .dot {
-					float: right;
-					display: block;
-				}
-
-				.icon {
-					margin-left: 10px;
-					font-size: 20px;
-				}
-
-				.dot {
-					border: 5px solid transparent;
-					border-radius: 100px;
-					margin-right: 24px;
-					margin-top: 5px;
-				}
-			}
-			.col-2 {
-				width: 270px;
-			}
-			.col-3 {
-				position: absolute;
-				top: 0;
-				left: 390px; // Covers previous cols
-				right: 120px;
-
-				.grey {
-					opacity: .7;
-				}
-			}
-			.col-4 {
-				width: 120px;
-				padding-left: 20px;
-				float: right;
-			}
-			*/
 }
 #main .message-list li:hover,
 #main .message-list li.active,
