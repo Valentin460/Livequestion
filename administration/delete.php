@@ -1,4 +1,5 @@
 <?php
+    include("../includes/head.php");
     include("../includes/administration-head.php");
     require("../traitement/traitement_delete.php");
 ?>
