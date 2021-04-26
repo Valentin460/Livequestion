@@ -1,13 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\accueil_utilisateur_connecte",
-    "\\administration",
-    "\\ajoutquestion",
-    "\\includes",
-    "\\profil",
-    "\\traitement"
+    ""
   ],
-  "SelectedNode": "\\includes\\connexion-head.php",
   "PreviewInSolutionExplorer": false
 }

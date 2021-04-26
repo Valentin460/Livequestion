@@ -16,8 +16,12 @@ h1 {
 p {
   margin-bottom: 1em;
 }
+
+.title {
+    color: #1D2127;
+}
 a {
-  color: #61C7B3;
+  color: #D00070;
   text-decoration: none;
   transition-duration: 0.3s;
 }
@@ -130,8 +134,8 @@ a:hover {
   text-align: center;
   font-weight: 500;
   text-transform: uppercase;
-  color: #61C7B3;
-  border: 2px solid #61C7B3;
+  color: #D00070;
+  border: 2px solid #D00070;
   display: block;
   margin: 0 50px 30px 50px;
   cursor: pointer;

@@ -14,19 +14,12 @@
 <aside id="sidebar" class="nano">
   <div class="nano-content">
     <div class="logo-container">
-      <span class="logo glyphicon glyphicon-envelope"></span>Questions</div><a class="compose-button">Catégories</a>
+      <span class="logo glyphicon glyphicon-envelope"></span><?php echo $_SESSION['pseudo']; ?></div><a href="../ajoutquestion/ajoutquestion.php" class="compose-button">+ Question</a>
     <menu class="menu-segment">
-    <?php
-      require '../db/fonctions.php';
-      $co = connexionBdd();
-      $statement = $co->query('SELECT nom_categorie FROM categories');
-      while($item = $statement->fetch())
-      {
-        echo '<ul>';
-        echo '<li><a href="#">' . $item['nom_categorie'] . '</a></li>';
-        echo '</ul>';
-      }
-    ?>
+        <ul>
+            <li><a href="../profil/profil.php">Mon profil</a></li>
+            <li><a href="../connexion/logout.php">Deconnexion</a></li>
+        </ul>
     </menu>
   </div>
 </aside>
@@ -34,9 +27,9 @@
   <div class="overlay"></div>
   <header class="header">
     <div class="search-box">
-      <input placeholder="Search..."><span class="icon glyphicon glyphicon-search"></span>
+      <input placeholder="Recherche..."><span class="icon glyphicon glyphicon-search"></span>
     </div>
-    <h1 class="page-title"><a class="sidebar-toggle-btn trigger-toggle-sidebar"><span class="line"></span><span class="line"></span><span class="line"></span><span class="line line-angle1"></span><span class="line line-angle2"></span></a>Questions<a><span class="icon glyphicon glyphicon-chevron-down"></span></a></h1>
+    <h1 class="page-title"><a class="sidebar-toggle-btn trigger-toggle-sidebar"><span class="line"></span><span class="line"></span><span class="line"></span><span class="line line-angle1"></span><span class="line line-angle2"></span></a>Questions<a></span></a></h1>
   </header>
   <div class="action-bar">
     <ul>
@@ -51,6 +44,8 @@
     <div class="nano-content">
         <ul class="message-list">
       <?php
+        require '../db/fonctions.php';
+        $co = connexionBdd();
         $statement = $co->query('SELECT * FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur ORDER BY date_creation_question ASC');
         while($item = $statement->fetch())
         {

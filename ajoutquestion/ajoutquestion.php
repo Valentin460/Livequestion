@@ -33,7 +33,7 @@
 						</p>
                         </div>
                         <div class="form-group">
-                            <label for="categorie" id="cat">Catégorie</label>
+                            <label for="categorie" id="cat">Categorie</label>
                             <select class="form-control" name="categorie" id="selectCat">
                                 <option value="categories" name="categories"></option>
                                 <?php
