@@ -33,8 +33,8 @@
 					<div class="form-group">
 						<label for="genre">Genre</label>
 						<select class="form-control" id="genre" name="genre">
-							<option>H</option>
-							<option>F</option>
+							<option>Homme</option>
+							<option>Femme</option>
 						</select>
 					</div>
 					<div class="form-row">
