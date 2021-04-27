@@ -7,7 +7,7 @@
     }
     $db = connexionBdd();
     $statement = $db->prepare("SELECT * FROM utilisateurs WHERE id_utilisateur = ?");
-    $statement = $db->prepare('SELECT * FROM utilisateurs, questions WHERE utilisateurs.id_utilisateur = questions.id_utilisateur AND questions.id_utilisateur = ? ORDER BY date_creation_question ASC');
+    $statement = $db->prepare('SELECT * FROM utilisateurs, questions, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND utilisateurs.id_utilisateur = ? ORDER BY date_creation_question ASC');
     $statement->execute(array($id));
     $item = $statement->fetch();
 
