@@ -55,7 +55,16 @@
                   echo '<input type="checkbox" id="chk1">';
                   echo '<label for="chk1" class="toggle"></label>';
                 echo '</div>';
-                echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['pseudo_utilisateur'] . '</p><span class="star-toggle glyphicon glyphicon-star-empty"></span></a>';
+                echo '<a href="../vuemembre/vuemembre.php?id='.$item['id_utilisateur'].'"><p class="title">' . $item['pseudo_utilisateur'] . '</p><div class="middle-wrapper">
+                <div class="like-wrapper">
+                <a class="like-button">
+                <span class="like-icon">
+                <div class="heart-animation-1"></div>
+                <div class="heart-animation-2"></div>
+                </span>
+                </a>
+                </div>
+                </div></a>';
               echo '</div>';
               echo '<div class="col col-2">';
                 echo '<a href="../vuequestion/vuequestion.php"><div class="subject">' . $item['titre_question']. '</span></div></a>';
