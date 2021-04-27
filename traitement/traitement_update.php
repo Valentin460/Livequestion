@@ -2,18 +2,18 @@
 
     require '../db/fonctions.php';
 
-    if(!empty($_GET['id'])) 
+    if(isset($_GET['id'])) 
     {
         $id = checkInput($_GET['id']);
     }
-
+    var_Dump($id);
     $pseudo_utilisateurErreur = $email_utilisateurErreur = $mot_de_passe_utilisateurErreur = $pseudo_utilisateur = $email_utilisateur = $mot_de_passe_utilisateur = "";
 
     if(!empty($_POST)) 
     {
-        $pseudo_utilisateur = checkInput($_POST['pseudo_utilisateur']);
-        $email_utilisateur = checkInput($_POST['$email_utilisateur']);
-        $mot_de_passe_utilisateur = checkInput(hash('sha256', $_POST['$mot_de_passe_utilisateur']));
+        $pseudo_utilisateur = checkInput($_POST['pseudo']);
+        $email_utilisateur = checkInput($_POST['email']);
+        $mot_de_passe_utilisateur = checkInput(hash('sha256', $_POST['motdepasse']));
         $isSuccess = true;
        
         if(empty($pseudo_utilisateur)) 
@@ -49,9 +49,9 @@
         $statement = $db->prepare("SELECT * FROM utilisateurs where id_utilisateur = ?");
         $statement->execute(array($id));
         $item = $statement->fetch();
-        $pseudo_utilisateur = $item['pseudo_utilisateur'];
-        $email_utilisateur = $item['email_utilisateur'];
-        $mot_de_passe_utilisateur = $item['mot_de_passe_utilisateur'];
+        $pseudo = $item['pseudo_utilisateur'];
+        $email = $item['email_utilisateur'];
+        $motdepasse = $item['mot_de_passe_utilisateur'];
     }
 
     function checkInput($data) 

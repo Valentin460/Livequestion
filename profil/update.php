@@ -11,8 +11,13 @@
 		header("Location: ../connexion/connexion.php");
 		exit(); 
 	}
+
+    $co = connexionBdd();
+    $statement = $co->query('SELECT * FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+    while($item = $statement->fetch()){
 ?>
         <form class="form" action="<?php echo 'update.php?id='.$id;?>" role="form" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo $item['id_utilisateur'];}?>">
             <div class="form-group">
                 <label for="name">Nom d'utilisateur :
                     <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" value="<?php echo $pseudo_utilisateur;?>">
