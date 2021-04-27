@@ -994,3 +994,11 @@ jQuery(document).ready(function($) {
 })(jQuery, window, document);
 
 //# sourceMappingURL=jquery.nanoscroller.js.map
+
+$('a.like-button').on('click', function (e) {
+    $(this).toggleClass('liked');
+
+    setTimeout(() => {
+        $(e.target).removeClass('liked')
+    }, 1000)
+});
