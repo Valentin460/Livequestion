@@ -41,6 +41,7 @@
           if ($admins['role_utilisateur'] == "administrateur") {
 	        echo '<a class="btn btn-primary" href="../administration/administration.php?id='.$item['id_utilisateur'].'"><i class="fas fa-users-cog"></i> Administration</a>';
           }
+          echo '<a class="btn btn-danger" href="desinscription.php?id='.$item['id_utilisateur'].'"><span class="glyphicon glyphicon-remove"></span> Se désinscrire</a>';
           ?>
         </div>
     </div>
