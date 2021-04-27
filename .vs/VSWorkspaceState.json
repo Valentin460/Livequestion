@@ -4,8 +4,12 @@
     "\\accueil_utilisateur_connecte",
     "\\ajoutquestion",
     "\\connexion",
-    "\\inscription"
+    "\\db",
+    "\\inscription",
+    "\\profil",
+    "\\traitement",
+    "\\vuemembre"
   ],
-  "SelectedNode": "\\connexion\\connexion.css",
+  "SelectedNode": "\\traitement\\traitement_vuemembre.php",
   "PreviewInSolutionExplorer": false
 }
