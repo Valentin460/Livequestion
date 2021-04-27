@@ -17,23 +17,23 @@
     while($item = $statement->fetch()){
 ?>
         <form class="form" action="<?php echo 'update.php?id='.$id;?>" role="form" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo $item['id_utilisateur'];}?>">
+            <input type="hidden" name="id" value="<?php echo $item['id_utilisateur'];?>">
             <div class="form-group">
                 <label for="name">Nom d'utilisateur :
-                    <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" value="<?php echo $pseudo_utilisateur;?>">
-                    <span class="help-inline"><?php echo $pseudo_utilisateurErreur;?></span>
+                    <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" value="<?php echo $item['pseudo_utilisateur'];?>">
+                    <span class="help-inline"><?php echo $pseudoErreur;?></span>
                 </label>
             </div>
             <div class="form-group">
                 <label for="name">Adresse email :
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Adresse email" value="<?php echo $email_utilisateur;?>">
-                    <span class="help-inline"><?php echo $email_utilisateurErreur;?></span>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Adresse email" value="<?php echo $item['email_utilisateur'];?>">
+                    <span class="help-inline"><?php echo $emailErreur;?></span>
                 </label>
             </div>
             <div class="form-group">
                 <label for="name">Mot de passe :
-                    <input type="password" class="form-control" id="motdepasse" name="motdepasse" placeholder="Mot de passe" value="<?php echo $mot_de_passe_utilisateur;?>">
-                    <span class="help-inline"><?php echo $mot_de_passe_utilisateurErreur;?></span>
+                    <input type="password" class="form-control" id="motdepasse" name="motdepasse" placeholder="Mot de passe" value="<?php echo $item['mot_de_passe_utilisateur'];}?>">
+                    <span class="help-inline"><?php echo $motDePasseErreur;?></span>
                 </label>
             </div>
             <div class="form-actions">

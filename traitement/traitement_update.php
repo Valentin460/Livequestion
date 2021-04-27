@@ -2,33 +2,32 @@
 
     require '../db/fonctions.php';
 
-    if(isset($_GET['id'])) 
+    if(empty($_GET['id'])) 
     {
         $id = checkInput($_GET['id']);
     }
-    var_Dump($id);
-    $pseudo_utilisateurErreur = $email_utilisateurErreur = $mot_de_passe_utilisateurErreur = $pseudo_utilisateur = $email_utilisateur = $mot_de_passe_utilisateur = "";
+    $pseudoErreur = $emailErreur = $motDePasseErreur = $pseudo = $email = $motDePasse = "";
 
     if(!empty($_POST)) 
     {
-        $pseudo_utilisateur = checkInput($_POST['pseudo']);
-        $email_utilisateur = checkInput($_POST['email']);
-        $mot_de_passe_utilisateur = checkInput(hash('sha256', $_POST['motdepasse']));
+        $pseudo = checkInput($_POST['pseudo']);
+        $email = checkInput($_POST['email']);
+        $motdepasse = checkInput(hash('sha256', $_POST['motdepasse']));
         $isSuccess = true;
        
-        if(empty($pseudo_utilisateur)) 
+        if(empty($pseudo)) 
         {
-            $pseudo_utilisateurErreur = 'Veuillez saisir votre pseudo';
+            $pseudoErreur = 'Veuillez saisir votre pseudo';
             $isSuccess = false;
         }
-        if(empty($email_utilisateur)) 
+        if(empty($email)) 
         {
-            $email_utilisateurErreur = 'Veuillez saisir votre adresse email';
+            $emailErreur = 'Veuillez saisir votre adresse email';
             $isSuccess = false;
         } 
-        if(empty($mot_de_passe_utilisateur)) 
+        if(empty($motDePasse)) 
         {
-            $mot_de_passe_utilisateurErreur = 'Veuillez saisir votre mot de passe';
+            $motDePasseErreur = 'Veuillez saisir votre mot de passe';
             $isSuccess = false;
         }
          
@@ -38,7 +37,7 @@
             if($isSuccess)
             {
                 $statement = $db->prepare("UPDATE utilisateurs set pseudo_utilisateur = ?, email_utilisateur = ?, mot_de_passe_utilisateur = ? WHERE id_utilisateur = ?");
-                $statement->execute(array($pseudo_utilisateur,$email_utilisateur,$mot_de_passe_utilisateur,$id));
+                $statement->execute(array($pseudo,$email,$motdepasse,$id));
             }
             header("Location: profil.php");
         }
