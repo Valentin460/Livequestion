@@ -5,11 +5,6 @@ body {
 	filter: drop-shadow(0 0 10px white);
 }
 
-#color {
-	background-color:#323232;
-	margin-top:60px;
-}
-
 #inscription {
 	margin-right:10%;
 	margin-left:10%;
