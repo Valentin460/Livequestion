@@ -36,6 +36,11 @@
           echo '<p>'.$item['genre_utilisateur'].'</p>';
           }
           echo '<a class="btn btn-primary" href="update.php?id='.$item['id_utilisateur'].'"><span class="glyphicon glyphicon-pencil"></span> Modifier vos informations</a>';
+          $admin = $db->query('SELECT role_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+          $admins = $admin->fetch();
+          if ($admins['role_utilisateur'] == "administrateur") {
+	        echo '<a class="btn btn-primary" href="../administration/administration.php?id='.$item['id_utilisateur'].'"><i class="fas fa-users-cog"></i> Administration</a>';
+          }
           ?>
         </div>
     </div>
