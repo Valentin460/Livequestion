@@ -17,6 +17,12 @@ html {
     background-color: white;
 }
 
+h3 {
+    font-size: 1.75rem;
+    color: white;
+    padding-top: 29px;
+}
+
 h2 {
     text-align: center;
 }
