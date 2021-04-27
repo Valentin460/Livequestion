@@ -1,5 +1,8 @@
-html {
-	background-color:#323232;
+body {
+	height: 100vh;
+	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	overflow: hidden;
+	filter: drop-shadow(0 0 10px white);
 }
 
 #color {
@@ -83,16 +86,9 @@ h5 a:hover {
 }
 
 .warning {
-	color:red;
-	margin-top:10px;
-	font-size:18px;
-}
-
-body {
-	height: 100vh;
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-	overflow: hidden;
-	filter: drop-shadow(0 0 10px white);
+	color: red;
+	margin-top: 10px;
+	font-size: 18px;
 }
 
 .snow {
