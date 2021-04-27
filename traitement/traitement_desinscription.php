@@ -10,7 +10,7 @@
     {
         $id = checkInput($_POST['id']);
         $db = connexionBdd();
-        $statement = $db->prepare("DELETE FROM utilisateurs, questions, reponses WHERE id_utilisateur = ?");
+        $statement = $db->prepare("DELETE FROM utilisateurs WHERE id_utilisateur = ?");
         $statement->execute(array($id));
         header("Location: ../index.php"); 
     }

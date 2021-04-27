@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\accueil_utilisateur_connecte",
-    "\\ajoutquestion"
+    "\\ajoutquestion",
+    "\\connexion",
+    "\\inscription"
   ],
-  "SelectedNode": "\\accueil_utilisateur_connecte\\accueil_utilisateur_connecte.css",
+  "SelectedNode": "\\connexion\\connexion.css",
   "PreviewInSolutionExplorer": false
 }
