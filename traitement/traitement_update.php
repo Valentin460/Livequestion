@@ -4,7 +4,7 @@
 
     if(empty($_GET['id'])) 
     {
-        $id = checkInput($_GET['id']);
+        $id = checkInput($_POST['id']);
     }
     $pseudoErreur = $emailErreur = $motDePasseErreur = $pseudo = $email = $motDePasse = "";
 
@@ -25,7 +25,7 @@
             $emailErreur = 'Veuillez saisir votre adresse email';
             $isSuccess = false;
         } 
-        if(empty($motDePasse)) 
+        if(empty($motdepasse)) 
         {
             $motDePasseErreur = 'Veuillez saisir votre mot de passe';
             $isSuccess = false;
