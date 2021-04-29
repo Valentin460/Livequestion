@@ -58,7 +58,7 @@
                 </div></a>';
               echo '</div>';
               echo '<div class="col col-2">';
-                echo '<a href="../vuequestion/vuequestion.php"><div class="subject">' . $item['titre_question']. '</span></div></a>';
+                echo '<a href="../vuequestion/vuequestion.php?id='.$item['id_utilisateur'].'"><div class="subject">' . $item['titre_question']. '</span></div></a>';
                 echo '<div class="date">' . $item['date_creation_question'] . '</div>';
               echo '</div>';
             echo '</li>';

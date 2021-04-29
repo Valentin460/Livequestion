@@ -11,16 +11,42 @@
 		    header("Location: ../connexion/connexion.php");
 		    exit(); 
 	    }
-    ?>
+
+        if(!empty($_GET['id'])) 
+        {
+            $id = checkInput($_GET['id']);
+        }
+        $db = connexionBdd();
+        $statement = $db->prepare("SELECT * FROM utilisateurs WHERE id_utilisateur = ?");
+        $statement = $db->prepare('SELECT * FROM utilisateurs, questions, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND utilisateurs.id_utilisateur = ? ORDER BY date_creation_question ASC');
+        $statement->execute(array($id));
+        $item = $statement->fetch();
+
+        function checkInput($data) 
+        {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
+
+        ?>
         <section>
             <div id="quest" class="container">
             	<li>
                     <ul>Avatar</ul>
-                    <ul>Nom</ul>
-                    <ul>Nb Réponses</ul>
-                    <ul>Catégories (beaucoup de Select à faire ici)</ul>
+                    <ul><?php echo $item['pseudo_utilisateur']; ?></ul>
+                    <ul>
+                    <?php
+                    $nbreponse = $co->query('SELECT COUNT(question_reponse) AS nbreponse FROM reponses, questions WHERE reponses.id_question = questions.id_question');
+                    $nbreponse = $nbreponse->fetch();
+                    echo $nbreponse['nbreponse'];
+                    ?>
+                    réponses
+                    </ul>
+                    <ul><?php echo $item['nom_categorie'] ?></ul>
                 </li>
-                <p>Question</p>
+                <p><?php echo $item['titre_question']?></p>
             </div>
             <div id="rep" class="container">
                 <?php
@@ -30,19 +56,23 @@
                     if(isset($_POST["submit"]) && !empty($_POST["reps"])){
 
                         $profil = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+                        $quest = $co->query('SELECT * FROM questions WHERE id_question = "'.$item['id_question'].'"');
 
                         $id = $profil->fetch();
+                        $quest = $quest->fetch();
 
-				        $query = $co->prepare('INSERT into reponses(id_utilisateur, question_reponse, date_reponse) VALUES(:id_utilisateur, :question_reponse, now())');
+				        $query = $co->prepare('INSERT into reponses(id_utilisateur, id_question, question_reponse, date_reponse) VALUES(:id_utilisateur, :id_question, :question_reponse, now())');
 
 				        $query->bindParam(':question_reponse', $reps);
                         $query->bindParam(':id_utilisateur', $id['id_utilisateur']);
+                        $query->bindParam(':id_question', $quest['id_question']);
 
                         $reps = $_POST['reps'];
 
 				        $query->execute();
 		        }
                 ?>
+
                 <div id="repondre">
                     <h4>Répondre à la question</h4>
                     <form method="post">
