@@ -1,15 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\accueil_utilisateur_connecte",
-    "\\ajoutquestion",
-    "\\connexion",
-    "\\db",
-    "\\inscription",
-    "\\profil",
-    "\\traitement",
-    "\\vuemembre"
+    ""
   ],
-  "SelectedNode": "\\traitement\\traitement_update.php",
   "PreviewInSolutionExplorer": false
 }
