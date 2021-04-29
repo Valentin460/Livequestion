@@ -39,7 +39,7 @@ function traitementInscription(array $informations){
 		if(isset($_POST['submit'])) {
 
 			// Vérification si les champs ont été saisis
-			if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'])){
+			if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'], $_POST['image'])){
 
 				// Vérification des champs et suppression des espaces, antislashs et convertit les caractères spéciaux en entités HTML
 				function verifyInput($var)
