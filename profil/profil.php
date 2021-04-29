@@ -79,7 +79,7 @@
   </div>
   <?php
         $db = connexionBdd();
-        $statement = $db->query('SELECT * FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
+        $statement = $db->query('SELECT * FROM categories, questions, utilisateurs WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
         while($item = $statement->fetch()) 
         {
   echo '<div class="torrents">';
@@ -96,7 +96,7 @@
             echo '<div class="col-md-6 col-xs-4">';
         echo '<div class="title">'.$item['titre_question'].'</div>';
         echo '</div>';
-        echo '<div class="col-md-2 col-xs-3">'.$item['id_categorie'].'</div>';
+        echo '<div class="col-md-2 col-xs-3">'.$item['nom_categorie'].'</div>';
         echo '<div class="col-md-2 col-xs-3">'.$item['pseudo_utilisateur'].'</div>';
         echo '<div class="col-md-2 col-xs-2">';
           echo '<div class="upload">'.$item['date_creation_question'].'</div>';

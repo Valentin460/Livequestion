@@ -31,15 +31,6 @@
     </div>
     <h1 class="page-title"><a class="sidebar-toggle-btn trigger-toggle-sidebar"><span class="line"></span><span class="line"></span><span class="line"></span><span class="line line-angle1"></span><span class="line line-angle2"></span></a>Questions<a></span></a></h1>
   </header>
-  <div class="action-bar">
-    <ul>
-      <li><a class="icon circle-icon glyphicon glyphicon-chevron-down"></a></li>
-      <li><a class="icon circle-icon glyphicon glyphicon-refresh"></a></li>
-      <li><a class="icon circle-icon glyphicon glyphicon-share-alt"></a></li>
-      <li><a class="icon circle-icon red glyphicon glyphicon-remove"></a></li>
-      <li><a class="icon circle-icon red glyphicon glyphicon-flag"></a></li>
-    </ul>
-  </div>
   <div id="main-nano-wrapper" class="nano">
     <div class="nano-content">
         <ul class="message-list">
