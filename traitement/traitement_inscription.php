@@ -20,6 +20,10 @@ function traitementInscription(array $informations){
 	$erreurs['verifyPassword'] = "Veuillez confirmer votre mot de passe";
 	}
 
+	if (empty($informations['image'])){
+	$erreurs['image'] = "Veuillez sélectionner votre avatar";
+	}
+
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
 
 	if (!empty($erreurs)) {
@@ -50,6 +54,8 @@ function traitementInscription(array $informations){
 				// Récupération des valeurs du formulaire
 				$pseudo_utilisateur = $_POST['name'];
                 $email_utilisateur = $_POST['email'];
+				$avatar_utilisateur = $_POST['image'];
+                $imagePath = '../images/'. basename($avatar_utilisateur);
 				$genre_utilisateur = $_POST['genre'];
 				$mot_de_passe_utilisateur = hash('sha256', $_POST['password']);
 
@@ -57,11 +63,12 @@ function traitementInscription(array $informations){
 				$co = connexionBdd();
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
-				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :genre_utilisateur, now())");
+				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, avatar_utilisateur, genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :avatar_utilisateur, :genre_utilisateur, now())");
 
 				$query->bindParam(':pseudo_utilisateur', $pseudo_utilisateur);
                 $query->bindParam(':email_utilisateur', $email_utilisateur);
 				$query->bindParam(':mot_de_passe_utilisateur', $mot_de_passe_utilisateur);
+				$query->bindParam(':avatar_utilisateur', $avatar_utilisateur);
 				$query->bindParam(':genre_utilisateur', $genre_utilisateur);
 
 				// Exécution de la requête
