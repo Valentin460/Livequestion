@@ -102,7 +102,7 @@
             ?></span> Réponse</h4>
             <div class="container">
             <?php
-                        $reponse = $co->query("SELECT * FROM reponses");
+                        $reponse = $co->query("SELECT * FROM reponses, questions WHERE reponses.id_question = questions.id_question");
 					    while ($donnees = $reponse->fetch()){
 					    ?>
                         
