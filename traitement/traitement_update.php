@@ -2,9 +2,9 @@
 
     require '../db/fonctions.php';
 
-    if(empty($_GET['id'])) 
+    if(isset($_GET['id'])) 
     {
-        $id = checkInput($_POST['id']);
+        $id = checkInput($_GET['id']);
     }
     $pseudoErreur = $emailErreur = $motDePasseErreur = $pseudo = $email = $motDePasse = "";
 
@@ -13,6 +13,7 @@
         $pseudo = checkInput($_POST['pseudo']);
         $email = checkInput($_POST['email']);
         $motdepasse = checkInput(hash('sha256', $_POST['motdepasse']));
+        $id = checkInput($_POST['id']);
         $isSuccess = true;
        
         if(empty($pseudo)) 
@@ -51,6 +52,7 @@
         $pseudo = $item['pseudo_utilisateur'];
         $email = $item['email_utilisateur'];
         $motdepasse = $item['mot_de_passe_utilisateur'];
+        $id = $item['id_utilisateur'];
     }
 
     function checkInput($data) 

@@ -3301,3 +3301,7 @@ body {
 		transform: translate(7.762vw, 100vh) scale(0.0766);
 	}
 }
+
+.update-text {
+	color:white;
+}
