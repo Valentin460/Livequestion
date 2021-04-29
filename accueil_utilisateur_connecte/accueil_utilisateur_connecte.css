@@ -277,6 +277,7 @@ a {
     transition-duration: 0.3s;
     padding-left: 4px;
     box-shadow: inset 4px 0 0 #EFEFEF, inset 5px 0 0 #e2e2e2;
+    background-color: #DCDCDC
 }
 
     #main .overlay {
@@ -1222,3 +1223,5 @@ a {
         transform: translate(2px, -18px) rotate(-25deg);
     }
 }
+
+
