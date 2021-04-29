@@ -21,7 +21,7 @@ function traitementInscription(array $informations){
 	}
 
 	if (empty($informations['image'])){
-	$erreurs['image'] = "Veuillez sélectionner votre avatar";
+	$erreurs['image'] = "Veuillez ajouter votre avatar";
 	}
 
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
@@ -39,7 +39,7 @@ function traitementInscription(array $informations){
 		if(isset($_POST['submit'])) {
 
 			// Vérification si les champs ont été saisis
-			if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'], $_POST['image'])){
+			if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'], $_FILES['image'])){
 
 				// Vérification des champs et suppression des espaces, antislashs et convertit les caractères spéciaux en entités HTML
 				function verifyInput($var)
@@ -54,21 +54,21 @@ function traitementInscription(array $informations){
 				// Récupération des valeurs du formulaire
 				$pseudo_utilisateur = $_POST['name'];
                 $email_utilisateur = $_POST['email'];
-				$avatar_utilisateur = $_POST['image'];
-                $imagePath = '../images/'. basename($avatar_utilisateur);
 				$genre_utilisateur = $_POST['genre'];
 				$mot_de_passe_utilisateur = hash('sha256', $_POST['password']);
+				$avatar_utilisateur = $_FILES["image"]["name"];
+				$imagePath = '../images/'. basename($avatar_utilisateur);
 
 				// Connexion à la base de données
 				$co = connexionBdd();
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
-				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, avatar_utilisateur, genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :avatar_utilisateur, :genre_utilisateur, now())");
+				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, avatar_utilisateur,  genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :avatar_utilisateur,  :genre_utilisateur, now())");
 
 				$query->bindParam(':pseudo_utilisateur', $pseudo_utilisateur);
                 $query->bindParam(':email_utilisateur', $email_utilisateur);
 				$query->bindParam(':mot_de_passe_utilisateur', $mot_de_passe_utilisateur);
-				$query->bindParam(':avatar_utilisateur', $avatar_utilisateur);
+				$query->bindParam('avatar_utilisateur', $avatar_utilisateur);
 				$query->bindParam(':genre_utilisateur', $genre_utilisateur);
 
 				// Exécution de la requête

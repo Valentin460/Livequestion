@@ -11,7 +11,7 @@
 		<div class="container">
 			<div id="inscription">
 				<h2><span class="span">Créez votre compte gratuitement<span></h2>
-				<form id="formulaire" method="post" action="">
+				<form id="formulaire" method="post" action="" enctype="multipart/form-data">
 					<div class="form-group">
 						<input type="text" name="name" class="form-control" placeholder="Pseudo" id="name">
 						<p class="warning"><?php
@@ -46,10 +46,10 @@
 								<p>1 Majuscule</p>
 							</div>
 							<p class="warning"><?php
-									if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['password'])){
-										echo $traitement['erreurs']['password'];
-									}
-								?>
+								if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['password'])){
+									echo $traitement['erreurs']['password'];
+								}
+							?>
 							</p>
 						</div>
 						<div class="form-group col-lg-6">
@@ -62,16 +62,16 @@
 							</p>
 						</div>
 						<div class="form-group">
-                            <label for="image">Sélectionnez une image :</label>
-                            <br>
-                            <input type="file" id="image" name="image"> 
-                            <p class="warning"><?php
-                                if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['image'])){
-                                    echo $traitement['erreurs']['image'];
-                                }
-                                ?>
-                            </p>
-                        </div>
+                        <label for="image">Sélectionnez une image :</label>
+						<br>
+                        <input type="file" id="image" name="image"> 
+                        <p class="warning"><?php
+							if (isset($traitement) && $traitement['success'] === false && isset($traitement['erreurs']['image'])){
+								echo $traitement['erreurs']['image'];
+							}
+							?>
+						</p>
+						</div>
 					</div>
 					<button type="submit" name="submit" class="btn btn-primary" id="but">S'inscrire</button>
 					<p id="condition">En vous inscrivant, vous acceptez nos <span id="utilisation">conditions d'utilisation</span></p>
