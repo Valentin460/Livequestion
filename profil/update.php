@@ -16,7 +16,7 @@
     $statement = $co->query('SELECT * FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
     while($item = $statement->fetch()){
 ?>
-        <form class="form" action="<?php echo 'update.php?id='.$id;?>" role="form" method="post" enctype="multipart/form-data">
+        <form id="update-form" class="form" action="<?php echo 'update.php?id='.$id;?>" role="form" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $item['id_utilisateur'];?>">
             <div class="form-group">
                 <label for="name" class="update-text">Nom d'utilisateur :
@@ -42,8 +42,8 @@
                 </label>
             </div>
             <div class="form-actions">
-                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
-                <a class="btn btn-primary" href="profil.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                <button type="submit" class="btn btn-success" id="btn-update"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                <a class="btn btn-warning" href="profil.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
             </div>
         </form>
 <?php

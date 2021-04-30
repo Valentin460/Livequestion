@@ -34,11 +34,12 @@
         <section>
             <div id="quest" class="container">
             	<li>
-                    <ul>Avatar</ul>
-                    <ul><?php echo $item['pseudo_utilisateur']; ?></ul>
-                    <ul><?php echo $item['nom_categorie'] ?></ul>
+                    <ul><img id="img-avatar" src="<?php echo '../images/'.$item['avatar_utilisateur'];?>" alt="Avatar"></ul>
+                    <ul id="pseudo-profil"><?php echo $item['pseudo_utilisateur']; ?></ul>
+                    <p><?php echo $item['role_utilisateur']; ?></p>
                 </li>
-                <p><?php echo $item['titre_question'] ?></p>
+                <p class="quest-p"><?php echo $item['titre_question'] ?></p>
+                <p><i class="fas fa-circle"></i><?php echo $item['nom_categorie'] ?></p>
             </div>
             <div id="rep" class="container">
                 <?php

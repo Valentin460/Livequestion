@@ -3303,3 +3303,16 @@ body {
 .update-text {
 	color:white;
 }
+
+#update-form {
+	text-align: center;
+	background-color: white;
+	padding-bottom: 30px;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 10px;
+}
+
+#btn-update {
+	background-color: #E50F7C;
+}

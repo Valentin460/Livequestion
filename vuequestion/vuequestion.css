@@ -1,5 +1,5 @@
 section {
-    margin-top: 35px;
+    margin-top: 130px;
     background-color: #E8EEF0;
     padding-top: 35px;
     padding-bottom: 50px;
@@ -17,7 +17,7 @@ section {
         display: flex;
     }
 
-    #quest p {
+    #quest .quest-p {
         background-color: white;
         padding: 5px;
         border-radius: 3px;
@@ -38,6 +38,7 @@ section {
         background-color: #E8EEF0;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        margin-bottom: 5px;
     }
 
 span {
@@ -72,4 +73,31 @@ span {
 h4 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+#img-avatar {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: solid black 2px;
+}
+
+li p {
+    margin-left: 15px;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+li #pseudo-profil {
+    font-size: 25px;
+    font-family: bold;
+}
+
+html {
+    background-color: black;
+}
+
+p i {
+    margin-right: 5px;
 }
