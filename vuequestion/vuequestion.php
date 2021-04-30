@@ -17,8 +17,8 @@
             $id = checkInput($_GET['id']);
         }
         $db = connexionBdd();
-        $statement = $db->prepare("SELECT * FROM utilisateurs WHERE id_utilisateur = ?");
-        $statement = $db->prepare('SELECT * FROM utilisateurs, questions, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND utilisateurs.id_utilisateur = ?');
+        $statement = $db->prepare("SELECT * FROM utilisateurs, questions WHERE questions.id_utilisateur = utilisateurs.id_utilisateur AND utilisateurs.id_question = ?");
+        $statement = $db->prepare('SELECT * FROM utilisateurs, questions, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND questions.id_question = ?');
         $statement->execute(array($id));
         $item = $statement->fetch();
 
@@ -48,7 +48,7 @@
                     if(isset($_POST["submit"]) && !empty($_POST["reps"])){
 
                         $profil = $co->query('SELECT id_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = "'.$_SESSION['pseudo'].'"');
-                        $quest = $co->query('SELECT * FROM questions WHERE id_question = "'.$item['id_question'].'"');
+                        $quest = $co->query('SELECT * FROM questions WHERE id_question ="' .$item['id_question'].'"');
 
                         $id = $profil->fetch();
                         $quest = $quest->fetch();
