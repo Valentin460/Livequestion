@@ -13,6 +13,7 @@
         $pseudo = checkInput($_POST['pseudo']);
         $email = checkInput($_POST['email']);
         $motdepasse = checkInput(hash('sha256', $_POST['motdepasse']));
+        $avatar = $_FILES["image"]["name"];
         $id = checkInput($_POST['id']);
         $isSuccess = true;
        
@@ -37,8 +38,8 @@
             $db = connexionBdd();
             if($isSuccess)
             {
-                $statement = $db->prepare("UPDATE utilisateurs set pseudo_utilisateur = ?, email_utilisateur = ?, mot_de_passe_utilisateur = ? WHERE id_utilisateur = ?");
-                $statement->execute(array($pseudo,$email,$motdepasse,$id));
+                $statement = $db->prepare("UPDATE utilisateurs set pseudo_utilisateur = ?, email_utilisateur = ?, mot_de_passe_utilisateur = ?, avatar_utilisateur = ? WHERE id_utilisateur = ?");
+                $statement->execute(array($pseudo,$email,$motdepasse,$avatar,$id));
             }
             header("Location: profil.php");
         }
@@ -52,6 +53,7 @@
         $pseudo = $item['pseudo_utilisateur'];
         $email = $item['email_utilisateur'];
         $motdepasse = $item['mot_de_passe_utilisateur'];
+        $avatar = $item['avatar_utilisateur'];
         $id = $item['id_utilisateur'];
     }
 

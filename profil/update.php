@@ -25,6 +25,11 @@
                 </label>
             </div>
             <div class="form-group">
+                <label for="image" class="update-text">Avatar :</label>
+				    <br>
+                    <input type="file" id="image" name="image"> 
+            </div>
+            <div class="form-group">
                 <label for="name" class="update-text">Adresse email :
                     <input type="text" class="form-control" id="email" name="email" placeholder="Adresse email" value="<?php echo $item['email_utilisateur'];?>">
                     <span class="help-inline"><?php echo $emailErreur;?></span>
