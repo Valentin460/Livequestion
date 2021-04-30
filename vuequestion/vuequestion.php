@@ -18,7 +18,7 @@
         }
         $db = connexionBdd();
         $statement = $db->prepare("SELECT * FROM utilisateurs WHERE id_utilisateur = ?");
-        $statement = $db->prepare('SELECT * FROM utilisateurs, questions, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND utilisateurs.id_utilisateur = ? ORDER BY date_creation_question ASC');
+        $statement = $db->prepare('SELECT * FROM utilisateurs, questions, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur AND utilisateurs.id_utilisateur = ?');
         $statement->execute(array($id));
         $item = $statement->fetch();
 
@@ -36,17 +36,9 @@
             	<li>
                     <ul>Avatar</ul>
                     <ul><?php echo $item['pseudo_utilisateur']; ?></ul>
-                    <ul>
-                    <?php
-                    $nbreponse = $co->query('SELECT COUNT(question_reponse) AS nbreponse FROM reponses, questions WHERE reponses.id_question = questions.id_question');
-                    $nbreponse = $nbreponse->fetch();
-                    echo $nbreponse['nbreponse'];
-                    ?>
-                    réponses
-                    </ul>
                     <ul><?php echo $item['nom_categorie'] ?></ul>
                 </li>
-                <p><?php echo $item['titre_question']?></p>
+                <p><?php echo $item['titre_question'] ?></p>
             </div>
             <div id="rep" class="container">
                 <?php
@@ -95,14 +87,14 @@
             <h4><span>
             <?php
 
-            $nbrep = $co->query('SELECT COUNT(question_reponse) AS nbrep FROM reponses');
+            $nbrep = $co->query('SELECT COUNT(question_reponse) AS nbrep FROM reponses, questions WHERE reponses.id_question = questions.id_question AND reponses.id_question = "'.$item['id_question'].'"');
             $nbreps = $nbrep->fetch();
             echo $nbreps['nbrep'];
 
-            ?></span> Réponse</h4>
+            ?></span> Réponses</h4>
             <div class="container">
             <?php
-                        $reponse = $co->query("SELECT * FROM reponses, questions WHERE reponses.id_question = questions.id_question");
+                        $reponse = $co->query('SELECT * FROM reponses, questions WHERE reponses.id_question = questions.id_question AND questions.id_question = "'.$item['id_question'].'"');
 					    while ($donnees = $reponse->fetch()){
 					    ?>
                         
@@ -110,7 +102,7 @@
                     <div>
                         <h6><?php 
                         
-                        $pseudos_rep = $co->query('SELECT pseudo_utilisateur FROM utilisateurs, reponses WHERE utilisateurs.id_utilisateur = reponses.id_utilisateur');
+                        $pseudos_rep = $co->query('SELECT pseudo_utilisateur FROM utilisateurs, reponses, questions WHERE utilisateurs.id_utilisateur = reponses.id_utilisateur AND reponses.id_question = questions.id_question');
                         $pseudo_reps = $pseudos_rep->fetch();
                         echo $pseudo_reps['pseudo_utilisateur'];
 
