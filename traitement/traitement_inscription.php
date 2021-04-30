@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 // Affichage des erreurs en cas de champs vides
 function traitementInscription(array $informations){
@@ -20,7 +20,7 @@ function traitementInscription(array $informations){
 	$erreurs['verifyPassword'] = "Veuillez confirmer votre mot de passe";
 	}
 
-	// S'il y a des erreurs : on les retourne, sinon on ins�re dans la base de donn�es
+	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
 
 	if (!empty($erreurs)) {
 		return [
@@ -34,10 +34,10 @@ function traitementInscription(array $informations){
 		// Si l'on clique sur le bouton envoyer du formulaire
 		if(isset($_POST['submit'])) {
 
-			// V�rification si les champs ont �t� saisis
+			// Vérification si les champs ont été saisis
 			if(isset($_POST['name'], $_POST['email'], $_POST['genre'], $_POST['password'], $_FILES['image'])){
 
-				// V�rification des champs et suppression des espaces, antislashs et convertit les caract�res sp�ciaux en entit�s HTML
+				// Vérification des champs et suppression des espaces, antislashs et convertit les caractères spéciaux en entités HTML
 				function verifyInput($var)
 				{
 					$var = trim($var);
@@ -47,49 +47,61 @@ function traitementInscription(array $informations){
 					return $var;
 				}
 				
-				// R�cup�ration des valeurs du formulaire
-				$pseudo_utilisateur = $_POST['name'];
-                $email_utilisateur = $_POST['email'];
-				$genre_utilisateur = $_POST['genre'];
+				// Récupération des valeurs du formulaire
+				$pseudo_utilisateur = verifyInput($_POST['name']);
+                $email_utilisateur = verifyInput($_POST['email']);
+				$genre_utilisateur = verifyInput($_POST['genre']);
 				$mot_de_passe_utilisateur = hash('sha256', $_POST['password']);
 				$avatar_utilisateur = $_FILES["image"]["name"];
 
-				// Connexion � la base de donn�es
+				// Connexion à la base de données
 				$co = connexionBdd();
 
-				// Pr�pation de la requ�te afin d'inserer les valeurs en base de donn�es
+				// Prépation de la requête afin d'inserer les valeurs en base de données
 				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, avatar_utilisateur, genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :avatar_utilisateur, :genre_utilisateur, now())");
 
-				// V�rifie si le fichier a �t� upload� sans erreur.
+				// Vérifie si le fichier a été uploadé sans erreur.
 				if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0){
 				$allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
 				$filename = $_FILES["image"]["name"];
 				$filetype = $_FILES["image"]["type"];
 				$filesize = $_FILES["image"]["size"];
 
-				// V�rifie l'extension du fichier
+				// Vérifie l'extension du fichier
 				$ext = pathinfo($filename, PATHINFO_EXTENSION);
-				if(!array_key_exists($ext, $allowed)) die("Erreur : Veuillez s�lectionner un format de fichier valide.");
+				if(!array_key_exists($ext, $allowed)) die("Erreur : Veuillez sélectionner un format de fichier valide.");
 
-				// V�rifie la taille du fichier - 5Mo maximum
+				// Vérifie la taille du fichier - 5Mo maximum
 				$maxsize = 5 * 1024 * 1024;
-				if($filesize > $maxsize) die("Error: La taille du fichier est sup�rieure � la limite autoris�e.");
+				if($filesize > $maxsize) die("Error: La taille du fichier est supérieure à la limite autorisée.");
 
-				// V�rifie le type MIME du fichier
+				// Vérifie le type MIME du fichier
 				if(in_array($filetype, $allowed)){
-					// V�rifie si le fichier existe avant de le t�l�charger.
-					if(file_exists("upload/" . $_FILES["image"]["name"])){
-						echo $_FILES["image"]["name"] . " existe d�j�.";
+					// Vérifie si le fichier existe avant de le télécharger.
+					if(file_exists("../images/" . $_FILES["image"]["name"])){
+						echo $_FILES["image"]["name"] . " existe déjà.";
 					} else{
 						move_uploaded_file($_FILES["image"]["tmp_name"], "../images/" . $_FILES["image"]["name"]);
-						echo "Votre fichier a �t� t�l�charg� avec succ�s.";
+						echo "Votre fichier a été téléchargé avec succès.";
 					} 
 				} else{
-					echo "Error: Il y a eu un probl�me de t�l�chargement de votre fichier. Veuillez r�essayer."; 
+					echo "Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer."; 
 				}
 				} else{
 				echo "Error: " . $_FILES["image"]["error"];
 				}
+
+				$avatar_utilisateur = strtr($avatar_utilisateur,
+				'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜİàáâãäåçèéêëìíîïğòóôõöùúûüıÿ',
+				'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'); 
+				//On remplace les lettres accentutées par les non accentuées dans $avatar_utilisateur.
+				//Et on récupère le résultat dans fichier
+ 
+				//En dessous, il y a l'expression régulière qui remplace tout ce qui n'est pas une lettre non accentuées ou un chiffre
+				//dans $avatar_utilisateur par un tiret "-" et qui place le résultat dans $avatar_utilisateur.
+				$avatar_utilisateur = preg_replace('/([^.a-z0-9]+)/i', '-', $avatar_utilisateur);
+
+				rename ("../images/".$_FILES['image']["name"], "../images/$avatar_utilisateur");
 
 				move_uploaded_file($_FILES["image"]["tmp_name"], "../images/" . $_FILES["image"]["name"]);
 
@@ -99,10 +111,10 @@ function traitementInscription(array $informations){
 				$query->bindParam(':avatar_utilisateur', $avatar_utilisateur);
 				$query->bindParam(':genre_utilisateur', $genre_utilisateur);
 
-				// Ex�cution de la requ�te
+				// Exécution de la requête
 				$query->execute();
 
-				// Message de confirmation apr�s l'envoie des informations en base de donn�es
+				// Message de confirmation après l'envoie des informations en base de données
 				if($query){
 					echo "<div>
 							<center><h3>Votre inscription a bien ete prise en compte !</h3></center>
