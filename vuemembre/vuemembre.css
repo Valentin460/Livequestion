@@ -1,6 +1,9 @@
 body {
 	background-color: #405063;
 	font-family: Roboto;
+	height: 100vh;
+	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	filter: drop-shadow(0 0 10px white);
 }
 
 .card {
@@ -97,12 +100,7 @@ body {
 	margin-left: 20px;
 }
 
-body {
-	height: 100vh;
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-	overflow: hidden;
-	filter: drop-shadow(0 0 10px white);
-}
+/* Animation neige */
 
 .snow {
 	position: absolute;
