@@ -548,7 +548,6 @@ a {
             }
 
             #main .message-list li .col-2 .subject {
-                left: 0;
                 right: 200px;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -561,6 +560,9 @@ a {
                 width: 200px;
                 padding-left: 80px;
             }
+.categorie{
+    right: 50px;
+}
 
 #main .load-more-link {
     display: block;

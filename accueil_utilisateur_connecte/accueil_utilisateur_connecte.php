@@ -37,7 +37,7 @@
       <?php
         require '../db/fonctions.php';
         $co = connexionBdd();
-        $statement = $co->query('SELECT * FROM questions, utilisateurs WHERE questions.id_utilisateur = utilisateurs.id_utilisateur ORDER BY date_creation_question ASC');
+        $statement = $co->query('SELECT * FROM questions, utilisateurs, categories WHERE categories.id_categorie = questions.id_categorie AND questions.id_utilisateur = utilisateurs.id_utilisateur ORDER BY date_creation_question ASC');
         while($item = $statement->fetch())
         {
             echo '<li class="unread">';
@@ -56,6 +56,9 @@
                 </a>
                 </div>
                 </div></a>';
+              echo '</div>';
+              echo '<div class="col col-2">';
+                echo '<div>' . $item['nom_categorie'] . '</div>';
               echo '</div>';
               echo '<div class="col col-2">';
                 echo '<a href="../vuequestion/vuequestion.php?id='.$item['id_question'].'"><div class="subject">' . $item['titre_question']. '</span></div></a>';

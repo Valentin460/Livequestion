@@ -103,7 +103,7 @@
                     <div>
                         <h6><?php 
                         
-                        $pseudos_rep = $co->query('SELECT pseudo_utilisateur FROM utilisateurs, reponses, questions WHERE utilisateurs.id_utilisateur = reponses.id_utilisateur AND reponses.id_question = questions.id_question');
+                        $pseudos_rep = $co->query('SELECT pseudo_utilisateur FROM utilisateurs, reponses, questions WHERE utilisateurs.id_utilisateur = reponses.id_utilisateur AND reponses.id_question = questions.id_question AND utilisateurs.pseudo_utilisateur =  "'.$_SESSION['pseudo'].'"');
                         $pseudo_reps = $pseudos_rep->fetch();
                         echo $pseudo_reps['pseudo_utilisateur'];
 
@@ -114,10 +114,9 @@
                     <br>
                 </div>
                 <br>
-                            <?php
-					        }
-
-		        ?>
+                    <?php
+					}
+                    ?>
             </div>
         </section>
     <?php
