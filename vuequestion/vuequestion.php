@@ -40,6 +40,7 @@
                 </li>
                 <p class="quest-p"><?php echo $item['titre_question'] ?></p>
                 <p><i class="fas fa-circle"></i><?php echo $item['nom_categorie'] ?></p>
+                <p><?php echo $item['date_creation_question']; ?></p>
             </div>
             <div id="rep" class="container">
                 <?php
