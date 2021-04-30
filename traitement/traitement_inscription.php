@@ -20,10 +20,6 @@ function traitementInscription(array $informations){
 	$erreurs['verifyPassword'] = "Veuillez confirmer votre mot de passe";
 	}
 
-	if (empty($informations['image'])){
-	$erreurs['image'] = "Veuillez ajouter votre avatar";
-	}
-
 	// S'il y a des erreurs : on les retourne, sinon on insère dans la base de données
 
 	if (!empty($erreurs)) {
@@ -57,18 +53,50 @@ function traitementInscription(array $informations){
 				$genre_utilisateur = $_POST['genre'];
 				$mot_de_passe_utilisateur = hash('sha256', $_POST['password']);
 				$avatar_utilisateur = $_FILES["image"]["name"];
-				$imagePath = '../images/'. basename($avatar_utilisateur);
 
 				// Connexion à la base de données
 				$co = connexionBdd();
 
 				// Prépation de la requête afin d'inserer les valeurs en base de données
-				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, avatar_utilisateur,  genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :avatar_utilisateur,  :genre_utilisateur, now())");
+				$query = $co->prepare("INSERT into utilisateurs (pseudo_utilisateur, email_utilisateur, mot_de_passe_utilisateur, avatar_utilisateur, genre_utilisateur, date_inscription_utilisateur) VALUES (:pseudo_utilisateur, :email_utilisateur, :mot_de_passe_utilisateur, :avatar_utilisateur, :genre_utilisateur, now())");
+
+				// Vérifie si le fichier a été uploadé sans erreur.
+				if(isset($_FILES["image"]) && $_FILES["image"]["error"] == 0){
+				$allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
+				$filename = $_FILES["image"]["name"];
+				$filetype = $_FILES["image"]["type"];
+				$filesize = $_FILES["image"]["size"];
+
+				// Vérifie l'extension du fichier
+				$ext = pathinfo($filename, PATHINFO_EXTENSION);
+				if(!array_key_exists($ext, $allowed)) die("Erreur : Veuillez sélectionner un format de fichier valide.");
+
+				// Vérifie la taille du fichier - 5Mo maximum
+				$maxsize = 5 * 1024 * 1024;
+				if($filesize > $maxsize) die("Error: La taille du fichier est supérieure à la limite autorisée.");
+
+				// Vérifie le type MIME du fichier
+				if(in_array($filetype, $allowed)){
+					// Vérifie si le fichier existe avant de le télécharger.
+					if(file_exists("upload/" . $_FILES["image"]["name"])){
+						echo $_FILES["image"]["name"] . " existe déjà.";
+					} else{
+						move_uploaded_file($_FILES["image"]["tmp_name"], "../images/" . $_FILES["image"]["name"]);
+						echo "Votre fichier a été téléchargé avec succès.";
+					} 
+				} else{
+					echo "Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer."; 
+				}
+				} else{
+				echo "Error: " . $_FILES["image"]["error"];
+				}
+
+				move_uploaded_file($_FILES["image"]["tmp_name"], "../images/" . $_FILES["image"]["name"]);
 
 				$query->bindParam(':pseudo_utilisateur', $pseudo_utilisateur);
                 $query->bindParam(':email_utilisateur', $email_utilisateur);
 				$query->bindParam(':mot_de_passe_utilisateur', $mot_de_passe_utilisateur);
-				$query->bindParam('avatar_utilisateur', $avatar_utilisateur);
+				$query->bindParam(':avatar_utilisateur', $avatar_utilisateur);
 				$query->bindParam(':genre_utilisateur', $genre_utilisateur);
 
 				// Exécution de la requête

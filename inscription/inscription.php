@@ -71,6 +71,7 @@
 							}
 							?>
 						</p>
+						<p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 5 Mo.</p>
 						</div>
 					</div>
 					<button type="submit" name="submit" class="btn btn-primary" id="but">S'inscrire</button>

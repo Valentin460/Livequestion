@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\connexion",
+    "\\inscription",
+    "\\traitement"
   ],
+  "SelectedNode": "\\connexion\\connexion.php",
   "PreviewInSolutionExplorer": false
 }
