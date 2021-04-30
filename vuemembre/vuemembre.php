@@ -35,6 +35,7 @@
         <div class="snow"></div>
           <h2><?php echo ' '.$item['pseudo_utilisateur']; ?></h2>
           <p><?php echo ' '.$item['genre_utilisateur']; ?></p>
+          <img src="<?php echo '../images/'.$item['avatar_utilisateur'];?>" alt="Avatar" class="avatar">
         </div>
     </div>
   <?php
