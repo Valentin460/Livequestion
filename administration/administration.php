@@ -37,6 +37,30 @@
             ?>
         </tbody>
     </table>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Utilisateurs</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                    $db = connexionBdd();
+                    $statement = $db->query('SELECT * FROM utilisateurs');
+                    while($item = $statement->fetch()) 
+                    {
+                        echo '<tr>';
+                        echo '<td>'. $item['pseudo_utilisateur'] . '</td>';
+                        echo '<td width=300>';
+                        echo ' ';
+                        echo '<a class="btn btn-danger" href="delete.php?id='.$item['id_utilisateur'].'"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>';
+                        echo '</td>';
+                        echo '</tr>';
+                    }
+            ?>
+        </tbody>
+    </table>
     </body>
     <?php
         include("../includes/connexion-footer.php");

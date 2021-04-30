@@ -15,6 +15,15 @@
         header("Location: ../administration/administration.php"); 
     }
 
+    if(!empty($_POST)) 
+    {
+        $id = checkInput($_POST['id']);
+        $db = connexionBdd();
+        $statement = $db->prepare("DELETE FROM utilisateurs WHERE id_utilisateur = ?");
+        $statement->execute(array($id));
+        header("Location: ../administration/administration.php"); 
+    }
+
     function checkInput($data) 
     {
       $data = trim($data);
