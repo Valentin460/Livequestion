@@ -2,7 +2,8 @@
 
 Projet réalisé au sein du lycée Saint-Vincent à Senlis.
 
-But du projet : Création d'un mini réseau social permettant de poser des questions ouvertes et d'y répondre.
+## BUT DU PROJET : 
+Création d'un mini réseau social permettant de poser des questions ouvertes et d'y répondre.
 
 Dans ce site internet il sera possible à un utilisateur de :
 
@@ -14,7 +15,7 @@ Dans ce site internet il sera possible à un utilisateur de :
 
 Une administration du site est accessible afin de modérer les questions ainsi que les utilisateurs.
 
-Technologies utilisées durant le projet :
+## TECHNOLOGIES UTILISEES DURANT LE PROJET :
 - HTML => Définir les différents contenus d’une page et leur donner du contenu.
 - CSS => Mise en forme des différents contenus définis par le HTML en leur appliquant des styles.
 - Créations graphiques => Mise en œuvre et déclinaison de la charte graphique sur l’ensemble du site.
@@ -23,7 +24,8 @@ Technologies utilisées durant le projet :
 - BOOTSTRAP => Collection d’outils utiles à la création du design de sites et d’applications Web.
 - MySQL => Système de gestion de bases de données relationnelles.
 
-## CONVENTIONS utilisées : Nommage des dossiers/fichiers en minuscule/français
+## CONVENTIONS UTILISEES : 
+Nommage des dossiers/fichiers en minuscule/français
 
 ## DUREE DU PROJET :
 - Début projet => Mi-mars
