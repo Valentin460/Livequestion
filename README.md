@@ -46,7 +46,7 @@ Nommage des dossiers/fichiers en minuscule/français
 - Identifiant : perrinecoupy / Mot de passe : azertyuiop
 - Identifiant : Aleksandar16 / Mot de passe : azertyuiop
 
-## RÔLE DE L'EQUIPE :
+## RÔLES DE L'EQUIPE :
 Arthur VALENTIM :
 - Page d'accueil de l'utilisateur non connecté (troisième partie du contenu)
 - Page d'administration
