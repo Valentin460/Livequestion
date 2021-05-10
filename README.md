@@ -23,14 +23,14 @@ Technologies utilisées durant le projet :
 - BOOTSTRAP => Collection d’outils utiles à la création du design de sites et d’applications Web.
 - MySQL => Système de gestion de bases de données relationnelles.
 
-##Conventions utilisées : Nommage des dossiers/fichiers en minuscule/français
+## CONVENTIONS utilisées : Nommage des dossiers/fichiers en minuscule/français
 
-##Durée du projet :
+## DUREE DU PROJET :
 - Début projet => Mi-mars
 - Fin projet => Fin avril
 - Charge => environ 100H/personne
 
-##GUIDE D'INSTALLATION :
+## GUIDE D'INSTALLATION :
 - Télécharger le projet (code) au format ZIP.
 - Récupérer le fichier au format .sql.
 - Ouvrir votre serveur local, accéder à votre interface de phpMyAdmin puis cliquer sur exporter afin d'ajoutr la base de données.
@@ -39,29 +39,30 @@ Technologies utilisées durant le projet :
 - Ouvrez votre navigateur et taper "localhost" sur la barre d'adresse puis chercher le nom du dossier qui s'intitule "Livequestion" afin de pouvoir accéder au projet
 - Vous pouvez accéder au site !
 
-##UTILISATEURS :
+## UTILISATEURS :
 - Identifiant : Valentin460 / Mot de passe : arthur
 - Identifiant : perrinecoupy / Mot de passe : azertyuiop
 - Identifiant : Aleksandar16 / Mot de passe : azertyuiop
 
-Arthur VALENTIM : 
-- Réalisation de la troisième partie de la page d'accueil de l'utilisateur non connecté
-- Réalisation de la page d'administration
-- Réalisation de la page d'ajout d'une question
+## RÔLE DE L'EQUIPE :
+Arthur VALENTIM :
+- Page d'accueil de l'utilisateur non connecté (troisième partie du contenu)
+- Page d'administration
+- Page d'ajout d'une question
 - Modélisation des données
-- Réalisation de la page d'une question
+- Page d'une question
 
-Perrine COUPY:
-- Réalisation de la page des visiteurs
-- Réalisation de la première partie de la page d'accueil de l'utilisateur non connecté
-- Réalisation de la page d'accueil de l'utilisateur connecté
+Perrine COUPY :
+- Page des visiteurs
+- Page d'accueil de l'utilisateur non connecté (première partie du contenu)
+- Page d'accueil de l'utilisateur connecté
 - Construction du menu principal
-- Réalisation de la page d'une vue d'un membre
+- Page d'une vue d'un membre
 
 Aleksandar MILENKOVIC:
-- Réalisation de la page des membres
-- Réalisation de la page d'une vue d'une question de l'utilisateur connecté
-- Réalisation de la deuxième partie de la page d'accueil de l'utilisateur non connecté
+- Page des membres
+- Page d'une vue d'une question de l'utilisateur connecté
+- Page d'accueil de l'utilisateur non connecté (deuxième partie du contenu)
 - Réalisation du formulaire d'inscription
 - Réalisation du formualire de connexion
 - Réalisation de la page profil
